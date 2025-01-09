@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 interface StarRatingProps {
-  rating: number; // 1-5 integer
+  rating: number; 
 }
 
 const StarRating: React.FC<StarRatingProps> = ({ rating }) => {

@@ -1,36 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import ScrollableColumn from "../muibook/scroll";
 import { products } from "../mockdate/tabletka";
-import {
-  Bigconteyno,
-  Bigconteynor,
-  Bigconteynormenu,
-  Bigcontenor2,
-  Contenor,
-  Contenor1,
-  Contenor2,
-  Contenor3menu,
-  Contenor3menu1,
-  Contenor3menu2,
-  Contenor3menu3,
-  Conteynormenu1,
-  Conteynormenu2,
-  Menu1,
-  Menu2,
-  Menu3,
-  Bigconteynor3,
-  Contenor3menu4,
-  Contenor3menu5,
-  Contenor3menu6,
-  B4menu,
-  B4menu1,
-  B4menu2,
-  Bigcontenor5,
-  Big5menu,
-  Big5menu1,
-  Big5menu2,
-  Imagewrapper,
-  Ioverlay,
+import { Bigconteyno, Bigconteynor, Bigconteynormenu, Bigcontenor2, Contenor, Contenor1, Contenor2, Contenor3menu, Contenor3menu1, Contenor3menu2, Contenor3menu3, Conteynormenu1, Conteynormenu2, Menu1, Menu2, Menu3, Bigconteynor3, Contenor3menu4, Contenor3menu5, Contenor3menu6, B4menu, B4menu1, B4menu2, Bigcontenor5, Big5menu, Big5menu1, Big5menu2, Imagewrapper, Ioverlay, Bigcontenor6, Bigcontenor61, Bigcontenor62, Bigcontenor8, Bigcontenor81, Bigcontenor9, Bigcontenor91, Bigcontenor10, Bigcontenor101, Bigcontenor102, Bigcontenor11, Bigcontenor111, Bigcontenor112, Bigcontenor13, Bigcontenor131, Bigcontenor132, Divyurak1, Ovozlar, Ovozlar1,  
 } from "./stylecomponent";
 import savatcha from "../Rasm/savatcha.svg";
 import burs from "../Rasm/brgr.svg";
@@ -56,34 +27,62 @@ import savatcha1 from "../Rasm/savatchaicon.svg"
 import kozcha from "../Rasm/koz.svg"
 // import yurakcha from "../Rasm/likecha.svg"
 import ToggleFavoriteButton from "../muibook/likeuchun";
-
+import Catagoriy from "./catagoriy";
+import { Product } from "../mockdate/tabletka";
+import maslahat from "../Rasm/mmrasm.webp"
+import BestCatagoriy from "./bestcatagory";
+import IzohlarComponent from "./izohlar";
+import BasicModal from "../muibook/modal";
+import AccordionUsage from "../muibook/accardion";
+import ambulance from "../Rasm/ambulance.svg"
+import ambulance1 from "../Rasm/Ordering.svg"
+import ambulance2 from "../Rasm/Onlineicon.svg"
+import ambulance3 from "../Rasm/Fully.svg"
+import ambulance4 from "../Rasm/Easy.svg"
+import ambulance5 from "../Rasm/Moreicon.svg"
+import SearchPrescription from "./fileupdate";
+import BlogpageComponent from "./blogpage";
+import tezyordam from "../Rasm/tezyordam.jpg"
+import tezyordam1 from "../Rasm/tezyordam1.webp"
+import tezyordam2 from "../Rasm/tezyordam2.webp"
+import tezyordam3 from "../Rasm/tezyordam3.jpg"
 
 const HomeComponents = () => {
 
+//catagoriy
+
+const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+const handleFilterSelect = (category: string | null) => {
+  setActiveCategory(category);
+};
+
+
+
 // filterlash jinsga qarab
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-const handleCategoryClick = (category: string) => {
+  const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
-  }; const categorySexMap: { [key: string]: string | null } = {
+  };
+  
+  const categorySexMap: { [key: string]: string | null } = {
     'Baby And Infant': 'children',
-    'Senior Care': 'unisex', 
+    'Senior Care': 'unisex',
     'Women’s Care': 'women',
     'Men’s Care': 'men',
-    'More...': null, 
+    'More...': null,
   };
+  
   const filteredProducts = selectedCategory
     ? Biodori.filter((product) => {
         const sexFilter = categorySexMap[selectedCategory];
         if (sexFilter === null) {
-          return true; 
+          return true;
         }
-       
-        if (sexFilter === 'women' || sexFilter === 'men') {
-          return product.sex === sexFilter || product.sex === 'unisex' || product.sex === 'children';
-        }
-        return product.sex === sexFilter;
+        return product.sex === sexFilter || product.sex === 'unisex';
       })
-    : Biodori;
+    : Biodori; 
+  
 
 
 
@@ -91,27 +90,34 @@ const handleCategoryClick = (category: string) => {
 
 
 //caruselfilterlashi 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 3;
-    const handleNext = () => {
-      setCurrentIndex((prevIndex) => {
-        
-        if (prevIndex + 1 >= Biodori.length) {
-          return 0; 
-        }
-        return prevIndex + 1;
-      });
-    }
-    const handlePrev = () => {
-      setCurrentIndex((prevIndex) => {
-       
-        if (prevIndex - 1 < 0) {
-          return Biodori.length - 1;
-        }
-        return prevIndex - 1;
-      });
-    };
-    const visibleItems = filteredProducts.slice(currentIndex, currentIndex + itemsPerPage);
+const [currentIndex, setCurrentIndex] = useState(0);
+const itemsPerPage = 3;
+
+
+const handleNext = () => {
+  setCurrentIndex((prevIndex) =>
+    (prevIndex + 1) % filteredProducts.length
+  );
+};
+
+const handlePrev = () => {
+  setCurrentIndex((prevIndex) =>
+    (prevIndex - 1 + filteredProducts.length) % filteredProducts.length
+  );
+};
+
+
+
+const visibleItems = [
+  ...filteredProducts.slice(currentIndex, currentIndex + itemsPerPage),
+];
+
+
+if (visibleItems.length < itemsPerPage) {
+  visibleItems.push(
+    ...filteredProducts.slice(0, itemsPerPage - visibleItems.length)
+  );
+}
 
 
 
@@ -120,41 +126,44 @@ const handleCategoryClick = (category: string) => {
 
 
     //time uchun 
-  const [selectedImage, setSelectedImage] = useState(products[0]);
-  const [countdown, setCountdown] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [selectedImage, setSelectedImage] = useState<Product>(products[0]);
+const [countdown, setCountdown] = useState({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
 
-  useEffect(() => {
-    if (!selectedImage) return;
+useEffect(() => {
+  if (!selectedImage || typeof selectedImage.discountDuration !== "number") return;
 
-    const targetTime = new Date();
-    targetTime.setDate(targetTime.getDate() + selectedImage.discountDuration);
+  const targetTime = new Date();
+  targetTime.setDate(targetTime.getDate() + selectedImage.discountDuration);
 
-    const timer = setInterval(() => {
-      const now = new Date();
-      const timeDiff = targetTime - now;
+  const timer = setInterval(() => {
+    const now = new Date();
+    const timeDiff = targetTime.getTime() - now.getTime();
 
-      if (timeDiff > 0) {
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+    if (timeDiff > 0) {
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-        setCountdown({ days, hours, minutes, seconds });
-      } else {
-        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        clearInterval(timer);
-      }
-    }, 1000);
+      setCountdown({ days, hours, minutes, seconds });
+    } else {
+      setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      clearInterval(timer);
+    }
+  }, 1000);
 
-    return () => clearInterval(timer);
-  }, [selectedImage]);
+  return () => clearInterval(timer);
+}, [selectedImage]);
+
+
+
 
   return (
     <Bigconteyno>
@@ -169,6 +178,7 @@ const handleCategoryClick = (category: string) => {
       </Bigconteynor>
 
       <Bigcontenor2>
+
         <Contenor>
           <img src={burs} alt="logo" />
         </Contenor>
@@ -253,9 +263,11 @@ const handleCategoryClick = (category: string) => {
         <Contenor2>
           <img src={barg} alt="logo" />
         </Contenor2>
+
       </Bigcontenor2>
 
       <Bigconteynor3>
+
         <Conteynormenu1>
           <img src={yurak} alt="logo" />
           <h1>Best offers</h1>
@@ -264,10 +276,14 @@ const handleCategoryClick = (category: string) => {
 
         <Contenor3menu>
           <Contenor3menu1>
-            <ScrollableColumn
-              visibleProducts={products}
-              onImageSelect={(product) => setSelectedImage(product)}
-            />
+          <ScrollableColumn
+  products={filteredProducts}
+  onImageSelect={(product) => setSelectedImage(product)}
+/>
+
+
+
+
           </Contenor3menu1>
 
           <Contenor3menu2>
@@ -388,6 +404,7 @@ const handleCategoryClick = (category: string) => {
             </Contenor3menu5>
           </Contenor3menu3>
         </Contenor3menu>
+
       </Bigconteynor3>
 
 
@@ -513,100 +530,176 @@ Gain</h1>
 
 </Bigcontenor5>
 
-<Bigcontenor4>
+<Catagoriy activeFilter={activeCategory} 
+        onFilterSelect={handleFilterSelect} 
+        itemsPerPage={3}/>
 
-<Bigcontenor4navbar>
-    <N4navbar>
-        <div><img src={smalllogo} alt="logo"/></div>
-        <h1>Personal Care</h1>
-    </N4navbar>
-    <N4navbar1>
 
-    <CarouselArrows onPrev={handlePrev} onNext={handleNext} />
-    </N4navbar1>
-</Bigcontenor4navbar>
+   <Bigcontenor6>
 
-<B4menu>
+<Bigcontenor61>
 
-    <B4menu1>
-        <div
-          style={{ display: "flex", gap: "8px", cursor: "pointer" }}
-          onClick={() => handleCategoryClick('for bones')}
-        >
-          <img src={arrow} alt="arrow" />
-          <h1>for bones</h1>
-        </div>
+<Bigcontenor62>
+  <div style={{display: "flex", alignItems: "center", gap:"4px"}}>
+    <p>STARTING WITH</p>
+    <h2>  19$</h2>
+  </div>
 
-        <div
-          style={{ display: "flex", gap: "8px", cursor: "pointer" }}
-          onClick={() => handleCategoryClick('for skin')}
-        >
-          <img src={arrow} alt="arrow" />
-          <h1>for skin</h1>
-        </div>
+<h1>
+Help you feel better 
+in study and work
+</h1>
 
-        <div
-          style={{ display: "flex", gap: "8px", cursor: "pointer" }}
-          onClick={() => handleCategoryClick('for hair')}
-        >
-          <img src={arrow} alt="arrow" />
-          <h1>for hair</h1>
-        </div>
+<button>SHOP NOW</button>
 
-        <div
-          style={{ display: "flex", gap: "8px", cursor: "pointer" }}
-          onClick={() => handleCategoryClick('for body')}
-        >
-          <img src={arrow} alt="arrow" />
-          <h1>for body</h1>
-        </div>
+</Bigcontenor62>
 
-        <div
-          style={{ display: "flex", gap: "8px", cursor: "pointer" }}
-          onClick={() => handleCategoryClick('More...')}
-        >
-          <img src={arrow} alt="arrow" />
-          <h1>More...</h1>
-        </div>
-      </B4menu1>
+<img src={maslahat} alt="logo" />
 
-      {visibleItems.map((dorilar) => (
-  <B4menu2 key={dorilar.id}>
-    <Imagewrapper>
-      <img src={dorilar.image} alt={dorilar.name} />
-      <Ioverlay>
-        <button>
-       <img src={savatcha1} alt="icon" />
-       <img src={kozcha} alt="icon" />
-       {/* <img src={yurakcha} alt="icon" /> */}
-<ToggleFavoriteButton/>
-        </button>
-      </Ioverlay>
-    </Imagewrapper>
+  </Bigcontenor61>
 
-    <StarRating rating={dorilar.rating} />
-    <h6>{dorilar.name}</h6>
+   </Bigcontenor6>
 
-    {dorilar.discountedPrice !== null ? (
-      <div>
-        <span style={{ textDecoration: "line-through", marginRight: "8px" }}>
-          {dorilar.originalPrice}$
-        </span>
-        <span style={{ color: "red" }}>{dorilar.discountedPrice}$</span>
+    <BestCatagoriy/>
+
+    <IzohlarComponent/>
+
+   <Bigcontenor8>
+    <BasicModal/>
+    <Bigcontenor81>
+      <div style={{display: 'flex', marginTop: '39px', gap: '7px'}}><img src={yurak} alt="logo" />
+      <p>Frequently Asked Questions</p>
       </div>
-    ) : (
-      <h2>{dorilar.originalPrice}$</h2>
-    )}
-  </B4menu2>
-))}
+      <h1>You've Got Any Questions?</h1>
+      <AccordionUsage />
+    </Bigcontenor81>
+   </Bigcontenor8>
+
+   <Bigcontenor9>
+  
+  <Bigcontenor91>
+   <img src={ambulance} alt="logo" />
+   <h1>24/7 fast and safe</h1>
+   <p>Delivery to any point
+   of the city and regions</p>
+  </Bigcontenor91>
+
+  <Bigcontenor91>
+   <img src={ambulance1} alt="logo" />
+   <h1>Order the Hard to Find </h1>
+   <p>Medicines and preparations </p>
+  </Bigcontenor91>
 
 
+  <Bigcontenor91>
+   <img src={ambulance2} alt="logo" />
+   <h1>Online consultation</h1>
+   <p>And house calls with real doctors</p>
+  </Bigcontenor91>
 
 
+  <Bigcontenor91>
+   <img src={ambulance3} alt="logo" />
+   <h1>Fully original </h1>
+   <p>With well-prepared and warranted products</p>
+  </Bigcontenor91>
 
-</B4menu>
+  <Bigcontenor91>
+   <img src={ambulance4} alt="logo" />
+   <h1>Easy and secure</h1>
+   <p>Online payment with credit and debit card</p>
+  </Bigcontenor91>
 
-</Bigcontenor4>
+
+  <Bigcontenor91>
+   <img src={ambulance5} alt="logo" />
+   <h1>More than 20,000</h1>
+   <p>Different product ranges</p>
+  </Bigcontenor91>
+
+   </Bigcontenor9>
+
+   <Bigcontenor10>
+
+<Bigcontenor101>
+<p>Your Day-life Protection</p>
+<h1>Protein Supplement</h1>
+<button>SHOP NOW</button>
+<p>Starting With 19$</p>
+</Bigcontenor101>
+
+<Bigcontenor102>
+<p>Starting With 19$</p>
+<h1>Immunity Boosters</h1>
+<button>SHOP NOW</button>
+<p>Get Up To 26%</p>
+</Bigcontenor102>
+
+
+   </Bigcontenor10>
+
+   <Bigcontenor11>
+
+   <Bigcontenor111>
+    <h1>Your health, physical and emotional well-being is important to us. We are always by your side and have made it even easier for you to find the necessary vitamins.</h1>
+     <h1>Find the right vitamin in seconds by scanning the prescription or entering the name.</h1>
+     <h1>Stay healthy with Ipar!</h1>
+     <p>Note: You must be log in to the website in order to upload a prescription</p>
+   </Bigcontenor111>
+
+   <Bigcontenor112>
+<SearchPrescription/>
+
+   </Bigcontenor112>
+
+   </Bigcontenor11>
+
+ <BlogpageComponent/>
+
+  <Bigcontenor13>
+   
+   <Bigcontenor131>
+ <div>
+   <Divyurak1>
+          <img src={yurak} alt="logo" />
+          <p>our retail outlets</p>
+        </Divyurak1>
+        <h1>Professional Service & Care 
+        In A Pleasant Ambience</h1>
+
+       <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</h2>
+       </div>
+
+   <Ovozlar>
+
+   <Ovozlar1>
+    <h4>14K+</h4>
+    <h3>Happy Customers</h3>
+   </Ovozlar1>
+
+   <Ovozlar1>
+    <h4>27K+</h4>
+    <h3>Products Sold</h3>
+   </Ovozlar1>
+
+   <Ovozlar1>
+    <h4>15+</h4>
+    <h3>Years Experience</h3>
+   </Ovozlar1>
+
+
+   </Ovozlar>
+
+   </Bigcontenor131>
+
+   <Bigcontenor132>
+  <img src={tezyordam} alt="icon" />
+<img src={tezyordam1} alt="icon" />
+<img src={tezyordam2} alt="icon" />
+<img src={tezyordam3} alt="icon" />
+   </Bigcontenor132>
+
+  </Bigcontenor13>
 
     </Bigconteyno>
   );

@@ -1,14 +1,29 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { products } from "../mockdate/tabletka";
 
-const ScrollableColumn = ({ onImageSelect }) => {
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  originalPrice: number;
+  discountedPrice: number;
+}
+
+interface ScrollableColumnProps {
+  products: Product[];
+  onImageSelect: (product: Product) => void;
+}
+
+const ScrollableColumn: React.FC<ScrollableColumnProps> = ({
+  products,
+  onImageSelect,
+}) => {
   const [startIndex, setStartIndex] = useState(0);
   const visibleItemsCount = 3;
 
-  const scroll = (direction) => {
+  const scroll = (direction: "up" | "down") => {
     if (direction === "up") {
       setStartIndex((prevIndex) =>
         prevIndex === 0 ? products.length - visibleItemsCount : prevIndex - 1
@@ -20,11 +35,11 @@ const ScrollableColumn = ({ onImageSelect }) => {
     }
   };
 
-  const currentVisibleProducts = products.slice(
-    startIndex,
-    startIndex + visibleItemsCount
-  );
+  const currentVisibleProducts = [
+    ...products.slice(startIndex, startIndex + visibleItemsCount),
+  ];
 
+  // Qayta aylanishni ta'minlash
   if (currentVisibleProducts.length < visibleItemsCount) {
     currentVisibleProducts.push(
       ...products.slice(0, visibleItemsCount - currentVisibleProducts.length)
@@ -44,10 +59,12 @@ const ScrollableColumn = ({ onImageSelect }) => {
         position: "relative",
       }}
     >
+      {/* Scroll Up Button */}
       <IconButton onClick={() => scroll("up")} size="small">
         <KeyboardArrowUpIcon />
       </IconButton>
 
+      {/* Product List */}
       <Box
         sx={{
           flex: 1,
@@ -59,7 +76,9 @@ const ScrollableColumn = ({ onImageSelect }) => {
       >
         {currentVisibleProducts.map((product) => {
           const discountPercentage = Math.round(
-            ((product.originalPrice - product.discountedPrice) / product.originalPrice) * 100
+            ((product.originalPrice - product.discountedPrice) /
+              product.originalPrice) *
+              100
           );
           return (
             <Box
@@ -71,8 +90,8 @@ const ScrollableColumn = ({ onImageSelect }) => {
                 cursor: "pointer",
               }}
               onClick={() => onImageSelect(product)}
-
             >
+              {/* Product Image */}
               <img
                 src={product.image}
                 alt={product.name}
@@ -82,7 +101,8 @@ const ScrollableColumn = ({ onImageSelect }) => {
                   borderRadius: "8px",
                 }}
               />
-            
+
+              {/* Discount Badge */}
               <Typography
                 sx={{
                   position: "absolute",
@@ -97,7 +117,8 @@ const ScrollableColumn = ({ onImageSelect }) => {
               >
                 {discountPercentage}% OFF
               </Typography>
-         
+
+              {/* Price Info */}
               <Box
                 sx={{
                   position: "absolute",
@@ -132,6 +153,7 @@ const ScrollableColumn = ({ onImageSelect }) => {
         })}
       </Box>
 
+      {/* Scroll Down Button */}
       <IconButton onClick={() => scroll("down")} size="small">
         <KeyboardArrowDownIcon />
       </IconButton>
@@ -140,8 +162,3 @@ const ScrollableColumn = ({ onImageSelect }) => {
 };
 
 export default ScrollableColumn;
-
-
-
-
-
