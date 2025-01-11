@@ -49,9 +49,9 @@ const Catagoriy: React.FC<CatagoriyProps> = ({ activeFilter, onFilterSelect, ite
 
   const handleFilterClick = (category: string) => {
     if (onFilterSelect && typeof onFilterSelect === "function") {
-      // "More..." uchun null jo'natish
+      
       if (category === "More...") {
-        onFilterSelect(""); // Null o'rniga bo'sh string foydalaning
+        onFilterSelect("");
       } else {
         onFilterSelect(category);
       }
@@ -61,8 +61,11 @@ const Catagoriy: React.FC<CatagoriyProps> = ({ activeFilter, onFilterSelect, ite
 
   return (
     <Bigconteyno>
+
       <Bigcontenor4>
+
         <Bigcontenor4navbar>
+          
           <N4navbar>
             <div>
               <img src={smalllogo} alt="logo" />
@@ -76,6 +79,8 @@ const Catagoriy: React.FC<CatagoriyProps> = ({ activeFilter, onFilterSelect, ite
         </Bigcontenor4navbar>
 
         <B4menu>
+
+
           <B4menu12>
             {[ "for bones", "for skin", "for hair", "for body", "More..." ].map((category, index) => (
               <div
@@ -89,9 +94,12 @@ const Catagoriy: React.FC<CatagoriyProps> = ({ activeFilter, onFilterSelect, ite
             ))}
           </B4menu12>
 
+
           {currentProducts.length > 0 ? (
             currentProducts.map((dorilar) => (
+
               <B4menu2 key={dorilar.id}>
+
                 <Imagewrapper>
                   <img src={dorilar.image} alt={dorilar.name} />
                   <Ioverlay>
@@ -122,7 +130,10 @@ const Catagoriy: React.FC<CatagoriyProps> = ({ activeFilter, onFilterSelect, ite
             <h3 style={{ textAlign: "center", color: "gray" }}>Not available</h3>
           )}
         </B4menu>
+
       </Bigcontenor4>
+
+
     </Bigconteyno>
   );
 };

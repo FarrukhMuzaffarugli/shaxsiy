@@ -1,5 +1,5 @@
-import { Footerdiv, Footerdiv00, Footerdiv1, Footerdiv2, Footerdiv3, Footerdiv3button, Footerdiv3button1, Footerdiv3button2, Footerdiv4, Footerdiv41 } from "./stylecomponent"
-
+import { Footerdiv, Footerdiv00, Footerdiv1, Footerdiv2, Footerdiv3, Footerdiv3button, Footerdiv3button1, Footerdiv3button2, Footerdiv4, Footerdiv41 } from "./stylecomponent" 
+import gmail from "../Rasm/gmail.webp"
 
 
 
@@ -14,10 +14,26 @@ const Footercomponent = () => {
   <Footerdiv>
    
    <Footerdiv1>
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
+   <a href="https://www.instagram.com/farrux__e?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+       alt="Instagram" 
+       />
+</a>
+<a href="https://www.facebook.com/farrux.egamberdiyev.543/about" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+       alt="Facebook" 
+       />
+</a>
+<a href="https://t.me/Farrukhe" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" 
+       alt="Telegram"  />
+</a>
+<a href="mailto:mfarrukhbekn@gmail.com" target="_blank" rel="noopener noreferrer">
+ <img src={gmail} alt="" />
+   
+</a>
+
+
    </Footerdiv1>
 
 <Footerdiv00>

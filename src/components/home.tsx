@@ -1,11 +1,11 @@
 import  { useState, useEffect } from "react";
 import ScrollableColumn from "../muibook/scroll";
 import { products } from "../mockdate/tabletka";
-import { Bigconteyno, Bigconteynor, Bigconteynormenu, Bigcontenor2, Contenor, Contenor1, Contenor2, Contenor3menu, Contenor3menu1, Contenor3menu2, Contenor3menu3, Conteynormenu1, Conteynormenu2, Menu1, Menu2, Menu3, Bigconteynor3, Contenor3menu4, Contenor3menu5, Contenor3menu6, B4menu, B4menu1, B4menu2, Bigcontenor5, Big5menu, Big5menu1, Big5menu2, Imagewrapper, Ioverlay, Bigcontenor6, Bigcontenor61, Bigcontenor62, Bigcontenor8, Bigcontenor81, Bigcontenor9, Bigcontenor91, Bigcontenor10, Bigcontenor101, Bigcontenor102, Bigcontenor11, Bigcontenor111, Bigcontenor112, Bigcontenor13, Bigcontenor131, Bigcontenor132, Divyurak1, Ovozlar, Ovozlar1,  
+import { Bigconteyno, Bigcontenor2,  Contenor1,  Contenor3menu, Contenor3menu1, Contenor3menu2, Contenor3menu3, Conteynormenu1, Conteynormenu2, Menu1, Menu2, Menu3, Bigconteynor3, Contenor3menu4, Contenor3menu5, Contenor3menu6, B4menu, B4menu1, B4menu2, Bigcontenor5, Big5menu, Big5menu1, Big5menu2, Imagewrapper, Ioverlay, Bigcontenor6, Bigcontenor61, Bigcontenor62, Bigcontenor8, Bigcontenor81, Bigcontenor9, Bigcontenor91, Bigcontenor10, Bigcontenor101, Bigcontenor102, Bigcontenor11, Bigcontenor111, Bigcontenor112, Bigcontenor13, Bigcontenor131, Bigcontenor132, Divyurak1, Ovozlar, Ovozlar1,  
 } from "./stylecomponent";
 import savatcha from "../Rasm/savatcha.svg";
-import burs from "../Rasm/brgr.svg";
-import barg from "../Rasm/barg.svg";
+
+
 import yurak from "../Rasm/yuraklog.svg";
 import img1 from "../Rasm/Services.svg";
 import img2 from "../Rasm/Services1.svg";
@@ -46,6 +46,7 @@ import tezyordam from "../Rasm/tezyordam.jpg"
 import tezyordam1 from "../Rasm/tezyordam1.webp"
 import tezyordam2 from "../Rasm/tezyordam2.webp"
 import tezyordam3 from "../Rasm/tezyordam3.jpg"
+import Caruselbattlegraund from "./caruselbattlegraund";
 
 const HomeComponents = () => {
 
@@ -166,30 +167,26 @@ useEffect(() => {
 
 
   return (
+    <div style={{display: 'flex', justifyContent: "center"}}>
     <Bigconteyno>
       
-      <Bigconteynor>
-        <Bigconteynormenu>
-          <p>Online medical supplies</p>
-          <h1>Get Your Vitamins</h1>
-          <h1>& Minerals</h1>
-          <button>SHOP NOW</button>
-        </Bigconteynormenu>
-      </Bigconteynor>
-
+      <Caruselbattlegraund/>
+    
       <Bigcontenor2>
 
-        <Contenor>
-          <img src={burs} alt="logo" />
-        </Contenor>
+       
 
         <Contenor1>
+
           <Conteynormenu1>
             <img src={yurak} alt="logo" />
             <h1>Welcome to Ipar</h1>
           </Conteynormenu1>
+
           <h2>Our Best Vitamin Services</h2>
+
           <Conteynormenu2>
+
             <Menu1>
               <Menu3>
                 <img src={img1} alt="icon" />
@@ -257,12 +254,12 @@ useEffect(() => {
                 </p>
               </Menu3>
             </Menu1>
+            
           </Conteynormenu2>
+
         </Contenor1>
 
-        <Contenor2>
-          <img src={barg} alt="logo" />
-        </Contenor2>
+       
 
       </Bigcontenor2>
 
@@ -411,10 +408,12 @@ useEffect(() => {
 <Bigcontenor4>
 
 <Bigcontenor4navbar>
+
     <N4navbar>
         <div><img src={smalllogo} alt="logo"/></div>
         <h1>Family Vitamin</h1>
     </N4navbar>
+
     <N4navbar1>
 
     <CarouselArrows onPrev={handlePrev} onNext={handleNext} />
@@ -702,6 +701,7 @@ in study and work
   </Bigcontenor13>
 
     </Bigconteyno>
+    </div>
   );
 };
 

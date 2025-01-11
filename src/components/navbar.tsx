@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
+
 const Brbigconteynor = styled.div`
   display: flex;
-width: 100%;
-padding: 15px 80px;
+  height: 110px;
+width: 95%;
+padding: 15px 40px;
 margin-top: 20px;
 gap: 100px;
 justify-content: center;
@@ -23,9 +25,11 @@ width: 225px;
    } 
 `;
 const Nrmenu = styled.div`
+
     display: flex;
 align-items: flex-start;
-gap: 45px;
+width: 876px;
+gap: 50px;
 h1{color: var(--Gray-Scale-60, #5C5C5C);
 font-family: Jost;
 font-size: 20px;
@@ -44,21 +48,25 @@ h1:hover {
 `
 const Nricon = styled.div`
    width: 130px;
-   gap: 11px;
+   display: flex;
+   justify-content: space-between;
+  
 `
 
 const Navbarcomponents = () => {
   return (
+
+<div style={{display: "flex", justifyContent:"center", width:"100%"}}>
     <Brbigconteynor>
+    
     <Nrlogo>
     <img src="https://iparbio.com/public/images/icon/iparLogo.png"></img>
     </Nrlogo>
 
     <Nrmenu>
-    <h1 style={{ color: 'var(--Secondary-50, #80B4FF)' }}>Home</h1>
-
-<h1>Personal Care</h1>
+    <h1>Home</h1>
 <h1>Family Care</h1>
+<h1>Personal Care</h1>
 <h1>Blog</h1>
 <h1>Brand</h1>
 <h1>pages</h1>
@@ -99,8 +107,8 @@ const Navbarcomponents = () => {
 
 </Nricon>
 
-
     </Brbigconteynor>
+</div>
   )
 }
 

@@ -86,10 +86,12 @@ const handleNext = () => {
 
           <Bigcontenor123>
             <div style={{ display: "flex", gap: "29px", alignItems: "center" }}>
+
               <Bigcontenor1241>
                 <img src={papka} alt="category" />
                 <h5>{blog.category}</h5>
               </Bigcontenor1241>
+
               <Bigcontenor124>
                 <img src={izohimg} alt="comments" />
                 <h5>{blog.comments.length} Comments</h5>
@@ -103,8 +105,10 @@ const handleNext = () => {
               <h5>By</h5>
               <h6>{blog.postedBy}</h6>
             </Bigcontenor125>
+
           </Bigcontenor123>
         </Bigcontenor122>
+        
       ))}
     </Bigcontenor12>
   );

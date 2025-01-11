@@ -69,6 +69,7 @@ export  const Biodori: Dorilar[] = [
       image: img1,
       rating: 4,
     },
+    
     {
       id: 2,
       name: "Super Cleanse",

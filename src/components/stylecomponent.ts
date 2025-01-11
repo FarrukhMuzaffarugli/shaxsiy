@@ -1,40 +1,23 @@
 import styled from 'styled-components'
 import iparImage from '../Rasm/ipar.webp'
 import backgrstol from '../Rasm/batlegraundga.webp'
-import backimg from "../Rasm/mmmizoh.webp"
 import sariq from '../Rasm/Backgroundsariq-cropped-cropped.svg'
 import protain from "../Rasm/protain1.jpg"
 import imunutet from "../Rasm/imunutet.jpg"
 import ukol from "../Rasm/ukol.svg"
 import bugdoy from "../Rasm/bugdoy.svg"
 
-export const Contenor2 = styled.div`
-width: 15%;
-height: 800px;
-display: flex;
-padding-top:53px;
-img {
-    width: 216px;
-height: 212px;
-flex-shrink: 0;
-}
-`
-
-export const Contenor = styled.div`
-width: 15%;
-height: 800px;
-display: flex;
-align-items: end;
-justify-content: end;
-img {
-    width: 266px;
-height: 212px;
-flex-shrink: 0;
+// Props tipini aniqlash
+interface BigconteynorProps {
+  bgImage: string;
 }
 
-`
+interface DotProps {
+  active: boolean;
+}
+
+
 export const Contenor1 = styled.div`
-width: 70%;
 height: 100%;
 justify-content: center;
 display: flex;
@@ -42,6 +25,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 10px;
+width:100%
 h2 {color: var(--Secondary-90, #2D3F59);
 text-align: center;
 font-family: Jost;
@@ -54,11 +38,13 @@ text-transform: capitalize;}
 `
 
 export const Bigcontenor2 = styled.div`
-width: 100%;
+justify-content: center;
 height:1000px;
+padding: 0 5%;
 display: flex;
 align-items: center;
 margin-top: 50px;
+
 `
 
 export const Bigconteynormenu = styled.div`
@@ -101,10 +87,30 @@ line-height: 24px; /* 150% */
 letter-spacing: 0.08px;
 text-transform: uppercase;
 }
+
+button:hover {
+  background-color: #0056cc; 
+  transform: scale(1.05); 
+}
+
+button:active {
+  background-color: #004499; 
+  transform: scale(0.95); 
+}
+
 display: flex;
 flex-direction: column;
 align-items: center;
 width: 768px;
+height: 368px;
+margin-top: 200px;
+`
+export const Bigconteynormenuu = styled.div`
+   
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 670px;
 height: 368px;
 `
 
@@ -116,24 +122,46 @@ flex-direction: column;
 
 `
 
-export const Bigconteynor = styled.div`
-width: 100%;
-aspect-ratio: 16 / 9;
-background-image: url('https://avatars.mds.yandex.net/i?id=9e09de6bb43846bc40d023f86ef719b1_l-5252083-images-thumbs&n=13'); 
-  background-size: contain; 
+export const Bigconteynor = styled.div <BigconteynorProps>`
+  width: 100%;
+  height: 850px;
+
+  background-image: ${({ bgImage }) => `url(${bgImage})`};
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
- 
-
-display: flex;
-flex-direction: column;
-align-items: end;
-justify-content: center;
-padding: 0px 80px;
-flex-shrink: 0;
+  display: flex;
+  align-items: center;
+justify-content:center;
+  flex-shrink: 0;
+  position: relative;
+`;
 
 
-`
+export const IndicatorWrapper = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+`;
+
+
+export const Dot = styled.div<DotProps>`
+  width: 12px;
+  height: 12px;
+  background-color: ${({ active }) => (active ? "#ffffff" : "#aaaaaa")};
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+  }
+`;
 export const Conteynormenu1 = styled.div`
 display: flex;
 gap: 7px;
@@ -164,7 +192,7 @@ gap: 25px;
 export const Menu1 = styled.div`
 display: flex;
 flex-direction: column;
-width: 25%;
+width: 223px;
 height:700px;
 
 
@@ -469,16 +497,18 @@ width: 100%;
 height: 584px;
 display: flex;
 flex-direction: column;
+align-items: center;
 padding: 0 5%; 
 margin-top: 100px;
 
 `
 export const Bigcontenor4navbar = styled.div`
-width:100%;
+width:1365px;
 height: 84px;
 display: flex;
 justify-content: space-between;
 align-items: end;
+
 `
 export const N4navbar = styled.div`
 display: flex;
@@ -519,6 +549,7 @@ position: relative;
 `
 export const B4menu = styled.div`
 display: flex;
+justify-content: center;
 height: 447px;
 width: 100%;
 gap: 30px;
@@ -554,11 +585,12 @@ h1:hover {
 `
 export const B4menu2 = styled.div`
 display: flex;
-width: 337px;
+width: 327px;
 height: 447px;
 flex-direction: column;
 align-items: center;
 border-radius: 15px;
+
 
 
 
@@ -597,7 +629,8 @@ gap: 30px;
 justify-content: center;
 `
 export const Big5menu = styled.div`
-width: 467px;
+
+width: 458px;
 height: 394px;
 flex-shrink: 0;
 padding: 3%;
@@ -705,7 +738,7 @@ background-size: cover;
   background-position: center;
 `
 export const Big5menu2 = styled.div`
-width: 467px;
+width: 458px;
 height: 394px;
 flex-shrink: 0;
 border-radius: 15px;
@@ -921,7 +954,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 flex-shrink: 0;
-background: url(${backimg}) no-repeat center center;
+background: url("https://stmedicalbeauty.com/img/my-shop-logo-1477732258.jpg") no-repeat center center;
 background-size: cover;
 `
 export const Bigcontenor71 = styled.div`
@@ -977,7 +1010,7 @@ justify-content: center;
 
 `
 export const Bigcontenor74 = styled.div`
-width: 420px;
+width: 430px;
 height: 415px;
 background-color: white;
 border-radius: 15px;
@@ -1384,7 +1417,7 @@ export const Bigcontenor12 = styled.div`
 export const Bigcontenor121 = styled.div`
 display: flex;
 flex-direction: column;
-width: 307px;
+width: 320px;
 height: 421px;
 margin-top: 112px;
 
@@ -1448,7 +1481,7 @@ text-transform: uppercase;
 export const Bigcontenor122 = styled.div`
 display: flex;
 flex-direction: column;
-width: 307px;
+width: 320px;
 height: 421px;
 margin-top: 112px;
 border: solid 1px black;
@@ -1456,7 +1489,7 @@ border-radius: 15px;
 
 
 img{
-  width: 307px;
+  width: 320px;
 height: 224px;
 background-color:  #D9D9D9;
 border-radius: 15px 15px 0px 0px;
@@ -1470,7 +1503,7 @@ display: flex;
 flex-direction: column;
 padding: 20px;
 height: 197px;
-width: 307px;
+width: 320px;
 gap: 20px;
 background: var(--Gray-Scale-0, #FFF);
 border-radius: 0px 0px 15px 15px;
@@ -1653,6 +1686,37 @@ h3{
 }
 
 `
+export const UploadButton = styled.button`
+margin-top: 27px;
+padding: 10px 20px;
+background: linear-gradient(180deg, #8DC8FF 0%, #80B4FF 100%);
+box-shadow: 0px 6px 10px 0px rgba(121, 99, 104, 0.14);
+color: var(--Gray-Scale-0, #FFF);
+font-family: Jost, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.08px;
+text-transform: uppercase;
+border: none;
+border-radius: 66px;
+cursor: pointer;
+width: 164px;
+height: 56px;
+transition: all 0.3s ease;
+
+&:hover {
+  background-color: #0056cc;
+  transform: scale(1.05);
+}
+
+&:active {
+  background-color: #004499;
+  transform: scale(0.95);
+}
+`;
+
 
 export const Bigcontenor132 = styled.div`
 display:grid;
@@ -1730,11 +1794,16 @@ export const Footerdiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  width: 100%;
+  width: 99vw;
   height: 826px;
   padding: 0 5%;
   align-items: center;
   background: linear-gradient(to bottom, transparent 19.5%, #405A80 19.5%);
+
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
+
 `;
 
 export const Footerdiv1 = styled.div`
@@ -1746,6 +1815,13 @@ height: 323px;
 img{
   width: 320px;
   height: 323px;
+  transition: transform 0.3s ease;
+   border-radius: 50%;
+&:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 }
 
 `
@@ -1998,21 +2074,28 @@ letter-spacing: 0.085px;
 `
 
 export const Footerdiv41 = styled.div`
-display: flex;
-flex-direction: column;
-gap: 6px;
-width: 86px;
-height: 174px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 86px;
+  height: 174px;
 
-p{
-  color: var(--Gray-Scale-0, #FFF);
+  p {
+    color: var(--Gray-Scale-0, #FFF);
 
-/* Body 1/Regular */
-font-family: Jost;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
-letter-spacing: 0.08px;
-}
-`
+    /* Body 1/Regular */
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.08px;
+    transition: all 0.3s ease; 
+  }
+
+  p:hover {
+    color: #80B4FF; 
+    cursor: pointer; 
+    transform: scale(1.05);
+  }
+`;
