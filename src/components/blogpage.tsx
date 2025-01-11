@@ -85,6 +85,7 @@ const handleNext = () => {
 </div>
 
           <Bigcontenor123>
+            
             <div style={{ display: "flex", gap: "29px", alignItems: "center" }}>
 
               <Bigcontenor1241>
@@ -107,6 +108,7 @@ const handleNext = () => {
             </Bigcontenor125>
 
           </Bigcontenor123>
+
         </Bigcontenor122>
         
       ))}

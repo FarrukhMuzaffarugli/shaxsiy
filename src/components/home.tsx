@@ -4,8 +4,6 @@ import { products } from "../mockdate/tabletka";
 import { Bigconteyno, Bigcontenor2,  Contenor1,  Contenor3menu, Contenor3menu1, Contenor3menu2, Contenor3menu3, Conteynormenu1, Conteynormenu2, Menu1, Menu2, Menu3, Bigconteynor3, Contenor3menu4, Contenor3menu5, Contenor3menu6, B4menu, B4menu1, B4menu2, Bigcontenor5, Big5menu, Big5menu1, Big5menu2, Imagewrapper, Ioverlay, Bigcontenor6, Bigcontenor61, Bigcontenor62, Bigcontenor8, Bigcontenor81, Bigcontenor9, Bigcontenor91, Bigcontenor10, Bigcontenor101, Bigcontenor102, Bigcontenor11, Bigcontenor111, Bigcontenor112, Bigcontenor13, Bigcontenor131, Bigcontenor132, Divyurak1, Ovozlar, Ovozlar1,  
 } from "./stylecomponent";
 import savatcha from "../Rasm/savatcha.svg";
-
-
 import yurak from "../Rasm/yuraklog.svg";
 import img1 from "../Rasm/Services.svg";
 import img2 from "../Rasm/Services1.svg";
@@ -254,7 +252,7 @@ useEffect(() => {
                 </p>
               </Menu3>
             </Menu1>
-            
+
           </Conteynormenu2>
 
         </Contenor1>

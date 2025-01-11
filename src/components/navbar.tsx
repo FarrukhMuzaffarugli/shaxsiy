@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -64,10 +65,22 @@ const Navbarcomponents = () => {
     </Nrlogo>
 
     <Nrmenu>
-    <h1>Home</h1>
+
+    <Link to="/">
+  <h1>Home</h1>
+
+</Link>
+
+    <Link to="/personal">
+    <h1>Personal Care</h1></Link>
+
+<Link to="/familycare">
 <h1>Family Care</h1>
-<h1>Personal Care</h1>
+</Link>
+
+<Link to="/blog">
 <h1>Blog</h1>
+</Link>
 <h1>Brand</h1>
 <h1>pages</h1>
 

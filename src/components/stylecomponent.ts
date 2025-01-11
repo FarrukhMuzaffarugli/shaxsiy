@@ -502,6 +502,17 @@ padding: 0 5%;
 margin-top: 100px;
 
 `
+export const Bigcontenor44 = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0 5%; 
+margin-top: 100px;
+
+`
+
 export const Bigcontenor4navbar = styled.div`
 width:1365px;
 height: 84px;
@@ -549,11 +560,20 @@ position: relative;
 `
 export const B4menu = styled.div`
 display: flex;
-justify-content: center;
 height: 447px;
-width: 100%;
+width: 1420px;
 gap: 30px;
 margin-top: 50px;
+`
+
+//
+export const B4menuc = styled.div`
+display: grid;
+grid-template-areas: "1 1 1";
+height: 100%;
+width: 1041px;
+gap: 30px;
+
 `
 
 export const B4menu1 = styled.div`
@@ -592,8 +612,6 @@ align-items: center;
 border-radius: 15px;
 
 
-
-
 h6{
   color: var(--Secondary-90, #2D3F59);
 text-align: center;
@@ -618,6 +636,8 @@ line-height: 24px; /* 120% */
 letter-spacing: 0.03px;
 }
 `
+
+
 
 export const Bigcontenor5 = styled.div`
 display: flex;
@@ -834,7 +854,6 @@ width: 338px;
 height: 447px;
 flex-shrink: 0;
 display: flex;
-
 flex-direction: column;
 padding: 40px;
 gap: 15px;
@@ -1525,7 +1544,8 @@ export const Bigcontenor124 = styled.div`
 display: flex;
 align-items: center;
 height: 24px;
-width: 96px;
+width: 110px;
+
 
 h5{
   color: var(--Gray-Scale-50, #727272);
@@ -1550,6 +1570,7 @@ display: flex;
 align-items: center;
 height: 24px;
 width: 83px;
+
 
 h5{
   color: var(--Gray-Scale-50, #727272);
@@ -2099,3 +2120,355 @@ export const Footerdiv41 = styled.div`
     transform: scale(1.05);
   }
 `;
+
+export const Blogdiv = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+width:100%;
+height: 397px;
+padding: 0 5%;
+background-image: url('https://www.dphealthnow.com/wp-content/uploads/2016/05/blue-medical-background.jpg');
+h1{
+  color: var(--Secondary-80, #405A80);
+margin-top: 60px;
+/* H2/SemiBold */
+font-family: Jost;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: 68px; /* 113.333% */
+letter-spacing: -0.3px;
+}
+
+p{
+
+}
+`
+export const HomeText = styled.span`
+ color: var(--Gray-Scale-50, #727272);
+
+/* Body 1/Regular */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+`;
+
+export const BlogText = styled.span`
+ color: var(--Secondary-70, #5375A6);
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.08px;
+`;
+
+export const Blogdiv1 = styled.div`
+display: grid;
+grid-template-areas: "1 1 1";
+justify-content: center;
+gap:30px;
+width: 100%;
+height: 100%;
+padding: 0 5%;
+margin-top: 100px;
+`
+
+
+export const Blogdiv2 = styled.div`
+display: flex;
+flex-direction: column;
+width: 435px;
+height: 503px;
+box-shadow: 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+border-radius: 15px;
+
+`
+
+export const Blogdiv3 = styled.div`
+display: flex;
+flex-direction: column;
+padding: 20px;
+height: 100%;
+width: 100%;
+gap: 20px;
+background: var(--Gray-Scale-0, #FFF);
+border-radius: 0px 0px 15px 15px;
+
+h1{
+  color: var(--Secondary-90, #2D3F59);
+width: 100%;
+height: 56px;
+/* H6/Medium */
+font-family: Jost;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 140% */
+letter-spacing: 0.03px;
+}
+
+`
+
+export const Blogdiv4 = styled.div`
+display: flex;
+width: 100%;
+height: 100%;
+
+img{
+  width: 435px;
+height: 306px;
+background-color:  #D9D9D9;
+border-radius: 15px 15px 0px 0px;
+}
+`
+export const Bloginfo = styled.div`
+display: flex;
+width: 100%;
+height: 100%;
+padding: 0 5%;
+gap: 30px;
+margin-top: 100px;
+justify-content: center;
+`
+
+export const Bloginfo1 = styled.div`
+display: flex;
+flex-direction: column;
+width: 950px;
+height: 3092px;
+border: solid 1px black;
+
+h1{
+  color: var(--Gray-Scale-70, #454545);
+height: 104px;
+/* H3/SemiBold */
+font-family: Jost;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: 52px; /* 108.333% */
+text-transform: capitalize;
+margin-top: 26px;
+}
+
+
+`
+export const Bloginfo2 = styled.div`
+display: flex;
+flex-direction: column;
+width: 460px;
+height: 2129px;
+border: solid 1px black;
+
+`
+
+export const Bloginfoimg = styled.div`
+display: flex;
+width: 950px;
+height: 632px;
+
+img{
+  width: 950px;
+height: 632px;
+border-radius: 15px;
+}
+
+`
+export const Bloginfoimginfo = styled.div`
+display: flex;
+justify-content: space-between;
+width: 400px;
+height: 24px;
+margin-top: 26px;
+
+
+
+img{
+  width: 24px;
+  height: 24px;
+}
+
+p{
+  gap : 3px;
+  color: var(--Gray-Scale-40, #898989);
+text-align: right;
+display: flex;
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+&:nth-child(2) {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -15px;
+      width: 2px;
+      background-color: #ccc;
+    }
+  }
+
+
+}
+
+h6{
+  color: var(--Primary-90, #293042);
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.08px;
+&:nth-child(1) {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -15px;
+      width: 2px;
+      background-color: #ccc;
+    }
+  }
+}
+
+
+`
+export const Bloginfotext = styled.div`
+display: flex;
+width: 100%;
+
+margin-top: 36px;
+
+p{
+  color: var(--Gray-Scale-50, #727272);
+
+/* Body 1/Regular */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+
+`
+
+export const Blogdanger = styled.div`
+display: flex;
+width: 100%;
+padding: 20px;
+border: solid 3px #FFC12B;
+margin-top: 36px;
+height: 200px;
+
+
+
+h1{
+  color: var(--Gray-Scale-70, #454545);
+
+/* H5/SemiBold */
+font-family: Jost;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 36px; /* 138.462% */
+
+&::before {
+    content: '“'; /* Qo‘shtirnoq belgisi */
+    position: absolute;
+  margin-top: -15px;
+    font-size: 60px;
+    color: #FFC107; /* Sariq rang */
+    font-family: serif;
+  }
+
+}
+
+`
+
+export const Blogdangerimg = styled.div`
+display: flex;
+width: 950px;
+height: 306px;
+gap: 30px;
+margin-top: 36px;
+
+img{
+  border-radius: 15px;
+  width: 459px;
+  height: 306px;
+}
+
+`
+export const Blogtagshare = styled.div`
+display: flex;
+justify-content: space-between;
+margin-top: 36px;
+width: 100%;
+height: 40px;
+
+`
+export const Blogtag = styled.div`
+display: flex;
+align-items: center;
+height: 40px;
+gap: 16px;
+
+
+h2{
+  color: var(--Gray-Scale-70, #454545);
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+
+button{
+  color: var(--Gray-Scale-0, #FFF);
+display: flex;
+justify-content: center;
+align-items: center;
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+border-radius: 25px;
+background: var(--Secondary-50, #80B4FF);
+height: 40px;
+}
+
+`
+export const Blogtagimg = styled.div`
+display: flex;
+gap: 8px;
+img{
+  width: 40px;
+  height: 40px;
+}
+
+`

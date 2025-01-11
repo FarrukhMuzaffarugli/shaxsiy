@@ -3,34 +3,48 @@
 
 
 export const blogdata = [
-    {
-      "id": "1",
-      "image": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD-c-%D0%B2%D0%BE%D1%8E%D1%8F-%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B-%D0%B8-%D0%B1%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D0%B8-%D0%B2-%D0%BA%D1%80%D0%BE%D0%B2%D0%BE%D1%82%D0%BE%D0%BA%D0%B5-%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D1%8F-136954620.jpg",
-      "title": "Benefits of Vitamin C for Immunity",
-      "category": "Vitamin C",
-      "postedBy": "John Doe",
-      "postedDate": "2023-12-01",
-      "rating": 4.7,
-      "comments": [
-        {
-          "user": "John Doe",
-          "avatar": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/11/14/seven-kevin-spacey-0.jpg?quality=75&width=1200&auto=webp",
-          "message": "Vitamin C helps boost immunity and improve overall health.",
-          "date": "2023-12-01"
-        },
-        {
-          "user": "Ali",
-          "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
-          "message": "What foods are rich in Vitamin C?",
-          "date": "2023-12-02"
-        }
-      ]
-    },
+  {
+    "id": "1",
+    "image": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD-c-%D0%B2%D0%BE%D1%8E%D1%8F-%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B-%D0%B8-%D0%B1%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D0%B8-%D0%B2-%D0%BA%D1%80%D0%BE%D0%B2%D0%BE%D1%82%D0%BE%D0%BA%D0%B5-%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D1%8F-136954620.jpg",
+    "title": "Benefits of Vitamin C for Immunity",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+    "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
+    "category": "Vitamin C",
+    "tags": ["Health", "Vitamins", "Nutrients"],
+    "postedBy": "John Doe",
+    "postedDate": "2023-12-01",
+    "rating": 4.7,
+    "comments": [
+      {
+        "user": "John Doe",
+        "avatar": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/11/14/seven-kevin-spacey-0.jpg?quality=75&width=1200&auto=webp",
+        "message": "Vitamin C helps boost immunity and improve overall health.",
+        "date": "2023-12-01"
+      },
+      {
+        "user": "Ali",
+        "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
+        "message": "What foods are rich in Vitamin C?",
+        "date": "2023-12-02"
+      }
+    ],
+    "relatedImages": [
+      "https://avatars.mds.yandex.net/i?id=c61065592aa309e5c80c306fe0a0ceeb5e70a9c9-12320521-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=0637c7db6c54934f5399ca434b02ed04_l-10113106-images-thumbs&n=13"
+    ],
+     
+   
+
+  },
+  
     {
       "id": "2",
       "image": "https://media.istockphoto.com/photos/doctor-working-with-medical-statistics-and-financial-reports-in-picture-id1056799938?k=6&m=1056799938&s=612x612&w=0&h=28PIl7zlcMUeInceZVnktqPek5xX_wJ4MI7b1LdSliY=",
       "title": "Importance of Regular Healthcare Checkups",
-      "category": "Healthcare",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+     "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",       
+       "category": "Healthcare",
+       "tags": ["Health", "Clinical", "Treatment"],
       "postedBy": "Sarah Lee",
       "postedDate": "2023-12-02",
       "rating": 4.8,
@@ -47,13 +61,20 @@ export const blogdata = [
           "message": "What tests should I prioritize during a yearly checkup?",
           "date": "2023-12-03"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "3",
       "image": "https://i.ytimg.com/vi/b1fKJOBeQfc/maxresdefault.jpg",
       "title": "How to Stay Safe During the Covid-19 Pandemic",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
       "category": "Covid",
+      "tags": ["Health", "Covid", "Treatment"],
+       "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "postedBy": "Michael Brown",
       "postedDate": "2023-12-03",
       "rating": 4.9,
@@ -70,13 +91,20 @@ export const blogdata = [
           "message": "What precautions should I take for my elderly parents?",
           "date": "2023-12-04"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "4",
       "image": "https://www.verywellhealth.com/thmb/e3dHRDOjxMSwLeZgY4xFX1EGOpQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/143920350-56a505ed3df78cf7728602a0.jpg",
       "title": "Understanding Over-the-Counter Medicines",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
       "category": "Medicine",
+      "tags": ["Pills", "Alternatives", "Health"],
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "postedBy": "Emily Davis",
       "postedDate": "2023-12-04",
       "rating": 4.6,
@@ -93,13 +121,20 @@ export const blogdata = [
           "message": "Can I combine OTC meds with prescribed ones?",
           "date": "2023-12-05"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "5",
       "image": "https://avatars.mds.yandex.net/i?id=c0bfeb78769252a7bcacd14acfa1fe37_l-8497136-images-thumbs&n=13",
       "title": "Top Nutrition Tips for a Healthy Lifestyle",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
       "category": "Nutrition",
+      "tags": ["Health", "Nutrients", "Vitamins"],
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "postedBy": "Lisa White",
       "postedDate": "2023-12-05",
       "rating": 4.9,
@@ -116,12 +151,18 @@ export const blogdata = [
           "message": "What are some quick healthy meals?",
           "date": "2023-12-06"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "6",
       "image": "https://i.ytimg.com/vi/fkLNqD8BYU0/hqdefault.jpg",
       "title": "Vitamin C: Myths and Facts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "category": "Vitamin C",
       "postedBy": " John Doe",
       "postedDate": "2023-12-06",
@@ -139,13 +180,20 @@ export const blogdata = [
           "message": "What should I look for when buying Vitamin C supplements?",
           "date": "2023-12-07"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "7",
       "image": "https://i.pinimg.com/originals/d7/48/77/d7487741635d6acb7b0f3442d7a0e122.jpg",
       "title": "The Role of Preventative Healthcare",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "category": "Healthcare",
+      "tags": ["Health", "Clinical", "Treatment"],
       "postedBy": "Sarah Lee",
       "postedDate": "2023-12-07",
       "rating": 4.7,
@@ -162,13 +210,20 @@ export const blogdata = [
           "message": "How often should I get a preventative screening?",
           "date": "2023-12-08"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "8",
       "image": "https://i.ytimg.com/vi/fW23ZQXrc-Y/maxresdefault.jpg",
       "title": "Covid-19 Vaccination: What You Need to Know",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "category": "Covid",
+      "tags": ["Covid", "Health", "Clinical"],
       "postedBy": "Michael Brown",
       "postedDate": "2023-12-08",
       "rating": 4.8,
@@ -185,13 +240,20 @@ export const blogdata = [
           "message": "Are there any side effects I should worry about?",
           "date": "2023-12-09"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "9",
       "image": "https://stcharleschill.com/wp-content/uploads/2019/05/prescription-bottle-label-template-inspirational-mckenna-mrs-home-page-of-prescription-bottle-label-template.jpg",
       "title": "Understanding Prescription Labels",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "category": "Medicine",
+      "tags": ["Pills", "Health", "Clinical"],
       "postedBy": "Emily Davis",
       "postedDate": "2023-12-09",
       "rating": 4.6,
@@ -208,13 +270,20 @@ export const blogdata = [
           "message": "What should I do if I miss a dose?",
           "date": "2023-12-10"
         }
-      ]
+      ],
+      "relatedImages": [
+        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+      ],
     },
     {
       "id": "10",
       "image": "https://i.pinimg.com/originals/72/33/9a/72339acb718fc813b3fc55edfe5d04dc.jpg",
       "title": "Balancing Macronutrients in Your Diet",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+      "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
       "category": "Nutrition",
+      "tags": ["Nutrients", "Health", "Vitamins"],
       "postedBy": "Lisa White",
       "postedDate": "2023-12-10",
       "rating": 4.8,
@@ -231,13 +300,20 @@ export const blogdata = [
             "message": "What should I do if I miss a dose?",
             "date": "2023-12-10"
           }
-        ]
+        ],
+        "relatedImages": [
+          "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+          "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+        ],
       },
         {
             "id": "11",
             "image": "https://cdn.culture.ru/images/51af5b8f-3100-52ad-897b-4a47e2bb5253",
             "title": "The Best Sources of Vitamin C",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Vitamins", "Nutrients", "Health"],
             "postedBy": "John Doe",
             "postedDate": "2023-12-11",
             "rating": 4.9,
@@ -254,13 +330,20 @@ export const blogdata = [
                 "message": "Can cooking affect Vitamin C content?",
                 "date": "2023-12-12"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "12",
             "image": "https://avatars.mds.yandex.net/i?id=47416dd7e13ebda63109591958a1d0e5_l-5273688-images-thumbs&n=13",
             "title": "The Importance of Mental Healthcare",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Health", "Clinical", "Treatment"],
             "postedBy": "Sarah Lee",
             "postedDate": "2023-12-12",
             "rating": 4.7,
@@ -277,13 +360,20 @@ export const blogdata = [
                 "message": "How can I identify symptoms of mental stress?",
                 "date": "2023-12-13"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "13",
             "image": "https://thumbs.dreamstime.com/b/what-do-you-need-to-know-text-blackboard-business-concept-background-what-do-you-need-to-know-text-197813930.jpg",
             "title": "Covid-19 Variants: What You Need to Know",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Covid", "Health", "Clinical"],
             "postedBy": "Michael Brown",
             "postedDate": "2023-12-13",
             "rating": 4.8,
@@ -300,13 +390,20 @@ export const blogdata = [
                 "message": "Do vaccines protect against all variants?",
                 "date": "2023-12-14"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "14",
             "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1oKjpp.img",
             "title": "The Dangers of Self-Medicating",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Emily Davis",
             "postedDate": "2023-12-14",
             "rating": 4.5,
@@ -323,13 +420,20 @@ export const blogdata = [
                 "message": "What should I do if I accidentally overdose?",
                 "date": "2023-12-15"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "15",
             "image": "https://i.pinimg.com/736x/c8/d5/ad/c8d5adbf89ddac637023fd9a92d894f2.jpg",
             "title": "The Role of Fiber in Nutrition",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Lisa White",
             "postedDate": "2023-12-15",
             "rating": 4.9,
@@ -346,13 +450,20 @@ export const blogdata = [
                 "message": "What are some fiber-rich foods?",
                 "date": "2023-12-16"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "16",
             "image": "https://m.media-amazon.com/images/I/7175p1DWPjL.jpg",
             "title": "How to Store Vitamin C for Maximum Potency",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Vitamins", "Health", "Nutrients"],
             "postedBy": "John Doe",
             "postedDate": "2023-12-16",
             "rating": 4.6,
@@ -369,13 +480,20 @@ export const blogdata = [
                 "message": "Can sunlight degrade Vitamin C in supplements?",
                 "date": "2023-12-17"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "17",
             "image": "https://i.ytimg.com/vi/PFdPKwdJ15U/maxresdefault.jpg",
             "title": "The Importance of Vaccination",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Sarah Lee",
             "postedDate": "2023-12-17",
             "rating": 4.7,
@@ -392,13 +510,20 @@ export const blogdata = [
                 "message": "Which vaccines are essential for adults?",
                 "date": "2023-12-18"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "18",
             "image": "https://udoc.lk/img/symptoms-of-covid-19.png",
             "title": "Understanding Long Covid Symptoms",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Covid", "Health", "Clinical"],
             "postedBy": " Michael Brown",
             "postedDate": "2023-12-18",
             "rating": 4.8,
@@ -415,13 +540,20 @@ export const blogdata = [
                 "message": "What are the common symptoms of Long Covid?",
                 "date": "2023-12-19"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://i.pinimg.com/originals/18/39/11/1839112b0cc8e4ed236f582a4563f492.jpg",
+              "https://mir-cdn.behance.net/v1/rendition/projects/max_808/e85170147102739.Y3JvcCwyMDQ4LDE2MDEsMCwyMjM.jpg"
+            ],
           },
           {
             "id": "19",
             "image": "https://i2.wp.com/hub.arkansasbluecross.com/wp-content/uploads/2020/03/prescription-label.jpg",
             "title": "How to Read Medicine Labels",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Pills", "Health", "Clinical"],
             "postedBy": "Emily Davis",
             "postedDate": "2023-12-19",
             "rating": 4.5,
@@ -438,13 +570,20 @@ export const blogdata = [
                 "message": "How do I know the right dosage for children?",
                 "date": "2023-12-20"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "20",
             "image": "https://hqproductreviews.com/wp-content/uploads/2020/11/benefits-of-plant-based-diet-fresh-plant-based-diet-the-health-benefits-of-benefits-of-plant-based-diet.jpg",
             "title": "The Benefits of Plant-Based Diets",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Lisa White",
             "postedDate": "2023-12-20",
             "rating": 4.9,
@@ -461,13 +600,20 @@ export const blogdata = [
                 "message": "What are the best protein sources in a plant-based diet?",
                 "date": "2023-12-21"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "21",
             "image": "https://i.ytimg.com/vi/JiH-U1cxXVg/maxresdefault.jpg",
             "title": "The Role of Vitamin C in Wound Healing",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Vitamins", "Health", "Nutrients"],
             "postedBy": "John Doe",
             "postedDate": "2023-12-21",
             "rating": 4.7,
@@ -484,13 +630,20 @@ export const blogdata = [
                 "message": "Can Vitamin C help with post-surgery recovery?",
                 "date": "2023-12-22"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "22",
             "image": "https://thumbs.dreamstime.com/b/%D1%81%D0%BF%D0%B0%D1%82%D1%8C-%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%B0-%D1%82%D1%80%D1%83%D0%B4%D0%BE%D0%B3%D0%BE%D0%BB%D0%B8%D0%BA%D0%B0-%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80-%D0%B2-%D1%85%D0%BE%D0%B4%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D1%81%D1%80%D0%BE%D0%BA%D0%B0-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B9-211149001.jpg",
             "title": "The Role of Sleep in Healthcare",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Covid", "Health", "Clinical"],
             "postedBy": "Sarah Lee",
             "postedDate": "2023-12-22",
             "rating": 4.8,
@@ -507,13 +660,20 @@ export const blogdata = [
                 "message": "How can I improve my sleep patterns?",
                 "date": "2023-12-23"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "23",
             "image": "https://blog.orbcomm.com/wp-content/uploads/2020/04/covid-visor-card.jpg",
             "title": "Staying Safe in Public Spaces During Covid",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Michael Brown",
             "postedDate": "2023-12-23",
             "rating": 4.9,
@@ -530,13 +690,20 @@ export const blogdata = [
                 "message": "Are cloth masks as effective as surgical masks?",
                 "date": "2023-12-24"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "24",
             "image": "https://www.fda.gov/files/safely-dispose.png",
             "title": "Safe Disposal of Unused Medicines",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Pills", "Health", "Clinical"],
             "postedBy": "Emily Davis",
             "postedDate": "2023-12-24",
             "rating": 4.6,
@@ -553,13 +720,20 @@ export const blogdata = [
                 "message": "Can I return unused medicines to pharmacies?",
                 "date": "2023-12-25"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "25",
             "image": "https://i.pinimg.com/736x/a1/d2/67/a1d26719fef6485dfcb6d4f976127492.jpg",
             "title": "Superfoods for Daily Energy Boost",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Pills", "Health", "Clinical"],
             "postedBy": "Lisa White",
             "postedDate": "2023-12-25",
             "rating": 4.9,
@@ -576,13 +750,20 @@ export const blogdata = [
                 "message": "Which superfoods are best for breakfast?",
                 "date": "2023-12-26"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "26",
             "image": "https://avatars.mds.yandex.net/i?id=14dc9785c7c39e734c609fd133d9ed11_l-9083123-images-thumbs&n=13",
             "title": "Vitamin C for Healthy Skin",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "John Doe",
             "postedDate": "2023-12-26",
             "rating": 4.8,
@@ -599,13 +780,20 @@ export const blogdata = [
                 "message": "Can Vitamin C serums be used daily?",
                 "date": "2023-12-27"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "27",
             "image": "https://i.pinimg.com/736x/45/9d/a2/459da2bac5bb947887d1a886bceca5ca.jpg",
             "title": "Preventing Seasonal Flu",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Covid", "Health", "Clinical"],
             "postedBy": "Sarah Lee",
             "postedDate": "2023-12-27",
             "rating": 4.7,
@@ -622,13 +810,20 @@ export const blogdata = [
                 "message": "What are natural remedies for flu symptoms?",
                 "date": "2023-12-28"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "28",
             "image": "https://i.ytimg.com/vi/JReVGoUGACA/maxresdefault.jpg",
             "title": "Covid-19: Myths vs. Facts",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Pills", "Health", "Clinical"],
             "postedBy": "Michael Brown",
             "postedDate": "2023-12-28",
             "rating": 4.9,
@@ -645,13 +840,20 @@ export const blogdata = [
                 "message": "Is double masking necessary?",
                 "date": "2023-12-29"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "29",
             "image": "https://previews.123rf.com/images/joshyabb/joshyabb1508/joshyabb150800030/43573165-antibiotic-resistance.jpg",
             "title": "Understanding Antibiotic Resistance",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Emily Davis",
             "postedDate": "2023-12-29",
             "rating": 4.6,
@@ -668,13 +870,20 @@ export const blogdata = [
                 "message": "Can resistance be reversed?",
                 "date": "2023-12-30"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "30",
             "image": "https://avatars.mds.yandex.net/i?id=388681d69c47b88f52256b3ca8b7bdb2_l-5850174-images-thumbs&n=13",
             "title": "Top Hydrating Foods for Summer",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Lisa White",
             "postedDate": "2023-12-30",
             "rating": 4.9,
@@ -691,13 +900,20 @@ export const blogdata = [
                 "message": "What are the best drinks for hydration?",
                 "date": "2023-12-31"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "31",
             "image": "https://avatars.mds.yandex.net/i?id=eccf0f3f16b4c80a9281b461e494f32d_l-9065836-images-thumbs&n=13",
             "title": "The Connection Between Vitamin C and Energy Levels",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Pills", "Health", "Clinical"],
             "postedBy": "John Doe",
             "postedDate": "2023-12-31",
             "rating": 4.8,
@@ -714,13 +930,20 @@ export const blogdata = [
                 "message": "Can Vitamin C help with chronic tiredness?",
                 "date": "2024-01-01"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "32",
             "image": "https://www.verywellmind.com/thmb/V_3NKu2Rsa6VLc1jLajJ9Ih0FQc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/stress-and-health-3145086-final-df59c9d51cf946a5b32c67e81fcad6b6.png",
             "title": "Managing Chronic Stress for Better Health",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Vitamins", "Health", "Nutrients"],
             "postedBy": "Sarah Lee",
             "postedDate": "2024-01-01",
             "rating": 4.7,
@@ -737,13 +960,20 @@ export const blogdata = [
                 "message": "What are some effective relaxation techniques?",
                 "date": "2024-01-02"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "33",
             "image": "https://i.ytimg.com/vi/CVvGvoMRUhk/maxresdefault.jpg",
             "title": "How Covid-19 Affects Mental Health",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Michael Brown",
             "postedDate": "2024-01-02",
             "rating": 4.8,
@@ -760,13 +990,20 @@ export const blogdata = [
                 "message": "How can we support loved ones experiencing mental health issues?",
                 "date": "2024-01-03"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "34",
             "image": "https://www.insurancemaneuvers.com/wp-content/uploads/2020/10/life-insurance-myths-3316138.jpg",
             "title": "Common Myths About Painkillers",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Emily Davis",
             "postedDate": "2024-01-03",
             "rating": 4.6,
@@ -783,13 +1020,20 @@ export const blogdata = [
                 "message": "Are over-the-counter painkillers addictive?",
                 "date": "2024-01-04"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "35",
             "image": "https://i.pinimg.com/originals/26/43/8c/26438c3c277541e6b0a834b66b614522.png",
             "title": "How Nutrition Impacts Mood",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Covid", "Health", "Clinical"],
             "postedBy": "Lisa White",
             "postedDate": "2024-01-04",
             "rating": 4.9,
@@ -806,13 +1050,20 @@ export const blogdata = [
                 "message": "What foods are known to reduce anxiety?",
                 "date": "2024-01-05"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "36",
             "image": "https://img.emedihealth.com/wp-content/uploads/2020/11/foods-to-help-you-meet-the-recommended-vitamin-c-intake-feat.jpg",
             "title": "Daily Vitamin C Intake Recommendations",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Vitamin C",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "John Doe",
             "postedDate": "2024-01-05",
             "rating": 4.7,
@@ -829,13 +1080,20 @@ export const blogdata = [
                 "message": "Can taking too much Vitamin C be harmful?",
                 "date": "2024-01-06"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "37",
             "image": "https://avatars.mds.yandex.net/i?id=edda0d8d4fc677e44724638167b41c7fa24bd930-12853318-images-thumbs&n=13",
             "title": "Tips for Healthy Aging",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Healthcare",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Sarah Lee",
             "postedDate": "2024-01-06",
             "rating": 4.8,
@@ -852,13 +1110,20 @@ export const blogdata = [
                 "message": "What exercises are best for seniors?",
                 "date": "2024-01-07"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "38",
             "image": "https://avatars.mds.yandex.net/i?id=ea308d38ce2226dcd39c0286cfa6536e29a1fb3a-8268761-images-thumbs&n=13",
             "title": "Understanding Covid Booster Shots",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Covid",
+            "tags": ["Vitamins", "Health", "Nutrients"],
             "postedBy": "Michael Brown",
             "postedDate": "2024-01-07",
             "rating": 4.9,
@@ -875,13 +1140,20 @@ export const blogdata = [
                 "message": "How often should booster shots be taken?",
                 "date": "2024-01-08"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "39",
             "image": "https://avatars.mds.yandex.net/i?id=9c9a5edffbb1366633cf1b67c29ecb66168cde7d-4011168-images-thumbs&n=13",
             "title": "The Dangers of Expired Medicines",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Medicine",
+            "tags": ["Nutrients", "Health", "Vitamins"],
             "postedBy": "Emily Davis",
             "postedDate": "2024-01-08",
             "rating": 4.6,
@@ -898,13 +1170,20 @@ export const blogdata = [
                 "message": "Can expired medicines be used in emergencies?",
                 "date": "2024-01-09"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           },
           {
             "id": "40",
             "image": "https://i.ytimg.com/vi/4v_Y7xCUdwE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGAgZSg8MA8=&rs=AOn4CLBCHVc4MxxhsPWTUcCm600C4GQTYw",
             "title": "Meal Planning for Busy Lifestyles",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
+            "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
             "category": "Nutrition",
+            "tags": ["Health", "Pills", "Treatment"],
             "postedBy": "Lisa White",
             "postedDate": "2024-01-09",
             "rating": 4.9,
@@ -921,6 +1200,10 @@ export const blogdata = [
                 "message": "What are quick meal prep tips for a family of four? Also, any advice on how to store leftovers effectively?",
                 "date": "2024-01-10"
               }
-            ]
+            ],
+            "relatedImages": [
+              "https://images.unsplash.com/photo-1589927986089-35812389fc63",
+              "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+            ],
           }
         ];
