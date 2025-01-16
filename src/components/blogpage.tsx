@@ -38,7 +38,7 @@ const handleNext = () => {
     if (startIndex > 0) {
       setStartIndex(startIndex - 1);
     } else {
-      setStartIndex(blogdata.length - ITEMS_PER_PAGE); // Go to the end
+      setStartIndex(blogdata.length - ITEMS_PER_PAGE); 
     }
   };
   

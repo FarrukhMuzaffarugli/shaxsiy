@@ -1,15 +1,23 @@
 
 import { useParams } from "react-router-dom";
-import { Bigconteyno, Blogdanger, Blogdangerimg, Blogdiv, Bloginfo, Bloginfo1, Bloginfo2, Bloginfoimg, Bloginfoimginfo, Bloginfotext, Blogtag, Blogtagimg, Blogtagshare, BlogText, HomeText } from "../stylecomponent"
+import { Bigconteyno, Blogdanger, Blogdangerimg, Blogdiv, Bloginfo, Bloginfo1,  Bloginfoimg, Bloginfoimginfo, Bloginfotext, Blogtag, Blogtagimg, Blogtagshare, BlogText, Comments, Comments1, HomeText,  } from "../stylecomponent"
 import { blogdata } from "../../mock/blog";
 import kulrangizoh from '../../Rasm/kulrangizoh.svg'
 import facebok from '../../Rasm/logofacebook.svg'
 import instagramimg from '../../Rasm/Logoinstagram.svg'
 import tviter from '../../Rasm/Logotwitter.svg'
 import pingramimg from '../../Rasm/Logopinterest.svg'
+import Commentscomponent from "./commentscomponent";
+
+import BlogCatagorysearch from "./blogCatagorysearch";
+
+
+
  
  
  const BloginfoConponent = () => {
+
+  
 
 // Share qilish funksiyasi
 const handleShare = (platform: string) => {
@@ -37,6 +45,40 @@ const handleShare = (platform: string) => {
     window.open(shareUrl, "_blank");
   };
 
+//comentla sonii hisoblash
+
+  interface Reply {
+    user: string;
+    avatar: string;
+    message: string;
+    date: string;
+    replies?: Reply[];
+  }
+  
+  interface CommentData {
+    user: string;
+    avatar: string;
+    message: string;
+    date: string;
+    replies?: Reply[];
+  }
+
+
+  const getTotalComments = (comments: CommentData[]): number => {
+    let total = 0;
+  
+    const countReplies = (commentList: CommentData[] | Reply[]) => {
+      commentList.forEach((comment) => {
+        total += 1; // Har bir izohni qo‘shish
+        if (comment.replies && comment.replies.length > 0) {
+          countReplies(comment.replies); // Javoblarni rekursiv qo‘shish
+        }
+      });
+    };
+  
+    countReplies(comments);
+    return total;
+  };
 
 
 
@@ -88,7 +130,7 @@ const handleShare = (platform: string) => {
 
 <div style={{display:"flex", gap: '2px'}}>
     <img src={kulrangizoh} alt="logo" />
-    <p>{blog.comments.length} Comments</p>
+    <p>{getTotalComments(blog.comments)} Comments</p>
 
 </div>
 
@@ -169,6 +211,18 @@ const handleShare = (platform: string) => {
 
 </Blogtagshare>
 
+<Comments>
+
+<Comments1>
+<h2>{getTotalComments(blog.comments)} comments</h2>
+
+</Comments1>
+
+<Commentscomponent/>
+{/* <Yangicomentcomponent/> */}
+
+</Comments>
+
 
 
 </Bloginfo1>
@@ -176,10 +230,7 @@ const handleShare = (platform: string) => {
 
 
 
-<Bloginfo2>
-
-
-</Bloginfo2>
+<BlogCatagorysearch/>
 
 
 </Bloginfo>

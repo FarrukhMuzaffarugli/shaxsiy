@@ -3,12 +3,13 @@
 
 
 export const blogdata = [
+
   {
     "id": "1",
     "image": "https://thumbs.dreamstime.com/b/%D0%B2%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD-c-%D0%B2%D0%BE%D1%8E%D1%8F-%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B-%D0%B8-%D0%B1%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D0%B8-%D0%B2-%D0%BA%D1%80%D0%BE%D0%B2%D0%BE%D1%82%D0%BE%D0%BA%D0%B5-%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D1%8F-136954620.jpg",
     "title": "Benefits of Vitamin C for Immunity",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget. In hac habitasse platea dictumst. Nunc consectetur urna pellentesque arcu dictum fermentum. Nulla interdum vehicula velit, ut luctus dolor hendrerit nec. Vivamus pharetra quam id ante cursus, sit amet mollis justo luctus. Aliquam vel lectus id ante lacinia elementum in eget eros. Duis vel posuere libero, nec iaculis turpis. Quisque nec rhoncus massa, sed viverra ante. Aliquam ante odio, sollicitudin id tempor eu, convallis lacinia nunc. Local SEO Section. Aenean tincidunt metus eros, eu ornare risus efficitur quis. Praesent viverra elit sed mauris dictum volutpat. Nam id diam risus. Maecenas consequat accumsan felis. Proin erat augue, egestas ac mauris et, tincidunt blandit mi.",
-    "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen. Collagen is one of your body’s major building blocks: it’s a protein and critical to keeping your skin structure strong.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar turpis nec commodo sodales. Proin vel quam nisi. Vestibulum efficitur pharetra urna quis congue. Curabitur sollicitudin odio nibh, vitae semper felis ornare eget.",
+    "highlight": "If your #skincaregoals include a younger-looking, glowing complexion, it all starts with collagen.",
     "category": "Vitamin C",
     "tags": ["Health", "Vitamins", "Nutrients"],
     "postedBy": "John Doe",
@@ -18,25 +19,41 @@ export const blogdata = [
       {
         "user": "John Doe",
         "avatar": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/11/14/seven-kevin-spacey-0.jpg?quality=75&width=1200&auto=webp",
-        "message": "Vitamin C helps boost immunity and improve overall health.",
-        "date": "2023-12-01"
-      },
-      {
-        "user": "Ali",
-        "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
-        "message": "What foods are rich in Vitamin C?",
-        "date": "2023-12-02"
+        "message": "I absolutely love the Ultra-Rich Moisturize Cream and I use it every night and I've seen a huge difference in my skin! Who needs botox?? It's hydrating, moisturizing and leaves your skin with the most radiant glow! ",
+        "date": "2023-12-01",
+        "replies": [
+          {
+            "user": "Ali",
+            "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
+            "message": "I absolutely love the Ultra-Rich Moisturize Cream and I use it every night and I've seen a huge difference in my skin! Who needs botox?? It's hydrating, moisturizing and leaves your skin with the most radiant glow! ",
+            "date": "2023-12-02"
+          },
+          {
+            "user": "Malik",
+            "avatar": "https://i.pinimg.com/736x/12/26/5e/12265e2222a9ee5b77d8bd17cf6ad4a3.jpg",
+            "message": "What should I do if I miss a dose?",
+            "date": "2023-12-10"
+          },
+          {
+            "user": "Umida",
+            "avatar": "https://avatars.mds.yandex.net/i?id=f7d378a15377d88075e4b0bd7b8086c614ad6473-5849895-images-thumbs&n=13",
+            "message": "What are some effective relaxation techniques?",
+            "date": "2024-01-02"
+          },
+          {
+            "user": "Malika",
+            "avatar": "https://avatars.mds.yandex.net/i?id=ada431735fd12c320847a4fcff147b766803da69-8449089-images-thumbs&n=13",
+            "message": "Which superfoods are best for breakfast?",
+            "date": "2023-12-26"
+          }
+        ]
       }
     ],
     "relatedImages": [
       "https://avatars.mds.yandex.net/i?id=c61065592aa309e5c80c306fe0a0ceeb5e70a9c9-12320521-images-thumbs&n=13",
       "https://avatars.mds.yandex.net/i?id=0637c7db6c54934f5399ca434b02ed04_l-10113106-images-thumbs&n=13"
-    ],
-     
-   
-
+    ]
   },
-  
     {
       "id": "2",
       "image": "https://media.istockphoto.com/photos/doctor-working-with-medical-statistics-and-financial-reports-in-picture-id1056799938?k=6&m=1056799938&s=612x612&w=0&h=28PIl7zlcMUeInceZVnktqPek5xX_wJ4MI7b1LdSliY=",
@@ -53,18 +70,35 @@ export const blogdata = [
           "user": "Sarah Lee",
           "avatar": "https://www.thesun.co.uk/wp-content/uploads/2022/10/wrestler-mourned-everything-know-life-766179832.jpg?strip=all&w=768",
           "message": "Regular checkups prevent serious health issues.",
-          "date": "2023-12-02"
+          "date": "2023-12-02",
+          "replies": [
+            {
+              "user": "Ali",
+              "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
+              "message": "I absolutely love the Ultra-Rich Moisturize Cream and I use it every night and I've seen a huge difference in my skin! Who needs botox?? It's hydrating, moisturizing and leaves your skin with the most radiant glow! ",
+              "date": "2023-12-02"
+            }
+          ]
+          
         },
         {
           "user": "Bekzod",
           "avatar": "https://avatars.mds.yandex.net/i?id=b0bcdff00a3cf375a6c4cdbaccae171c5244bb96-12527828-images-thumbs&n=13",
           "message": "What tests should I prioritize during a yearly checkup?",
-          "date": "2023-12-03"
+          "date": "2023-12-03",
+          "replies": [
+            {
+              "user": "Ali",
+              "avatar": "https://avatars.mds.yandex.net/i?id=923a974944c5811832a5dbc1df9763ffeb92740c-2899831-images-thumbs&n=13",
+              "message": "I absolutely love the Ultra-Rich Moisturize Cream and I use it every night and I've seen a huge difference in my skin! Who needs botox?? It's hydrating, moisturizing and leaves your skin with the most radiant glow! ",
+              "date": "2023-12-02"
+            }
+          ]
         }
       ],
       "relatedImages": [
-        "https://images.unsplash.com/photo-1589927986089-35812389fc63",
-        "https://images.unsplash.com/photo-1590086782792-42dd2350140d"
+        "https://tm.clinic/upload/iblock/bf3/a5xqglycao4j1z7330cfhibh2l8vv2yx/pexels-antoni-shkraba-5214992.jpg",
+        "https://i2.wp.com/www.chaudharyhospital.in/wp-content/uploads/2022/01/health-checkup-min.png"
       ],
     },
     {
