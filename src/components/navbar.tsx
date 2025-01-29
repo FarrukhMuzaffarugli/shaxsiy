@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Brbigconteynor = styled.div`
   display: flex;
   height: 110px;
-width: 95%;
+width: 1440px;
 padding: 15px 40px;
 margin-top: 20px;
 gap: 100px;
@@ -67,6 +67,7 @@ const Navbarcomponents = () => {
     <Nrmenu>
 
     <Link to="/">
+
   <h1>Home</h1>
 
 </Link>

@@ -23,7 +23,6 @@ import StarRating from "./StarRating";
 import { Biodori } from "../mock/Doridate";
 import savatcha1 from "../Rasm/savatchaicon.svg"
 import kozcha from "../Rasm/koz.svg"
-// import yurakcha from "../Rasm/likecha.svg"
 import ToggleFavoriteButton from "../muibook/likeuchun";
 import Catagoriy from "./catagoriy";
 import { Product } from "../mockdate/tabletka";
@@ -45,6 +44,7 @@ import tezyordam1 from "../Rasm/tezyordam1.webp"
 import tezyordam2 from "../Rasm/tezyordam2.webp"
 import tezyordam3 from "../Rasm/tezyordam3.jpg"
 import Caruselbattlegraund from "./caruselbattlegraund";
+import { Link } from "react-router-dom";
 
 const HomeComponents = () => {
 
@@ -167,6 +167,8 @@ useEffect(() => {
   return (
     <div style={{display: 'flex', justifyContent: "center"}}>
     <Bigconteyno>
+      
+      
       
       <Caruselbattlegraund/>
     
@@ -470,7 +472,7 @@ useEffect(() => {
         <button>
        <img src={savatcha1} alt="icon" />
        <img src={kozcha} alt="icon" />
-       {/* <img src={yurakcha} alt="icon" /> */}
+       
 <ToggleFavoriteButton/>
         </button>
       </Ioverlay>
@@ -507,14 +509,18 @@ useEffect(() => {
 <p>SUPER SALE</p>
 <h1>20% All
 band CNH</h1>
-<button>SHOP NOW</button>
+<Link to="/shop">
+  <button>SHOP NOW</button>
+</Link>
 </Big5menu>
 
 <Big5menu1>
 <p>EXTRA 9% SAVINGS ON ORDER</p>
 <h1>For Weight 
 Gain</h1>
-<button>SHOP NOW</button>
+<Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
 
 </Big5menu1>
 
@@ -522,7 +528,9 @@ Gain</h1>
 <p>FREE SHIPPING AND MORE</p>
 <h1>Vitamin B12 
 & B2</h1>
-<button>SHOP NOW</button>
+<Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
 </Big5menu2>
 
 </Bigcontenor5>
@@ -547,7 +555,9 @@ Help you feel better
 in study and work
 </h1>
 
-<button>SHOP NOW</button>
+<Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
 
 </Bigcontenor62>
 
@@ -621,14 +631,18 @@ in study and work
 <Bigcontenor101>
 <p>Your Day-life Protection</p>
 <h1>Protein Supplement</h1>
-<button>SHOP NOW</button>
+<Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
 <p>Starting With 19$</p>
 </Bigcontenor101>
 
 <Bigcontenor102>
 <p>Starting With 19$</p>
 <h1>Immunity Boosters</h1>
-<button>SHOP NOW</button>
+<Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
 <p>Get Up To 26%</p>
 </Bigcontenor102>
 

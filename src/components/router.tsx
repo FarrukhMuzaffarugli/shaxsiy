@@ -7,6 +7,7 @@ import Personalcomponent from "./personalcare/Personal";
 import FamilycatigoryComponent from "./familycare/familycatigory";
 import BlogComponent from "./blogfolder/blogcomponent";
 import BloginfoConponent from "./blogfolder/bloginfo";
+import Shopcomponent from "./shoppapka/shop";
 
 const AppRouter: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter: React.FC = () => {
         <Route path="/familycare" element={<FamilycatigoryComponent />} />
         <Route path="/blog" element={<BlogComponent />} />
         <Route path="/blog/:id" element={<BloginfoConponent/>} />
+        <Route path="/shop" element={<Shopcomponent/>} />
       </Routes>
       <Footercomponent />
     </>

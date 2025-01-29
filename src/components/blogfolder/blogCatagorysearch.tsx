@@ -1,6 +1,6 @@
 import { blogdata } from "../../mock/blog";
 import FreeSoloCreateOption from "../../muibook/searchinput";
-import { Bloginfo2, Yangicatagory, Yangicatagory1, Yangicatagory2, Yangicatagory3, Yangicatagory4, Yangicomment1 } from "../stylecomponent";
+import { Bloginfo2, Yangicatagory, Yangicatagory1, Yangicatagory2, Yangicatagory3, Yangicatagory4, Yangicatagory5, Yangicomment1 } from "../stylecomponent";
 import { Link, useParams } from "react-router-dom";
 
 const BlogCatagorysearch = () => {
@@ -25,6 +25,7 @@ const BlogCatagorysearch = () => {
 
   return (
     <Bloginfo2>
+      
       <FreeSoloCreateOption />
       
       <Yangicomment1>
@@ -68,21 +69,19 @@ const BlogCatagorysearch = () => {
       </Yangicatagory1>
 
       <Yangicatagory3>
-        <h2>Tags</h2>
+  <h2>Tags</h2>
+  <Yangicatagory4>
+    {uniqueTags.map((tag, index) => (
+      <button key={index}>{tag}</button>
+    ))}
+  </Yangicatagory4>
+</Yangicatagory3>
 
-      
-        {uniqueTags.map((tag, index) => (
+<Yangicatagory5>
+<p>Starting with 19$</p>
+  <h1>Immunity Boosters</h1>
+</Yangicatagory5>
 
-            <div key={index} style={{display: "flex"}}>
-
-          <Yangicatagory4 >
-            <button>{tag}</button>
-            
-          </Yangicatagory4>
-
-          </div>
-        ))}
-      </Yangicatagory3>
 
     </Bloginfo2>
   );

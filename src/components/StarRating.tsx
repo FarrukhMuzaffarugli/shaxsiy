@@ -9,10 +9,10 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
   const totalStars = 5; 
 
  
-  const starStyle = {
-    color: "gold",
-    marginRight: "2px",
-  };
+  // const starStyle = {
+  //   color: "gold",
+  //   marginRight: "2px",
+  // };
 
   return (
     <div style={{ display: "flex", gap: "2px" }}>

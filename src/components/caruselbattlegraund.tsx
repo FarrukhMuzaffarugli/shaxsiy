@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import { Bigconteynor, IndicatorWrapper, Dot, Bigconteynormenu, Bigconteynormenuu } from "./stylecomponent";
+import { Link } from "react-router-dom";
 
 const images = [ 
  "https://avatars.mds.yandex.net/get-znatoki/1506847/2a0000018553757288f073b98f7d71a78985/orig",
@@ -27,7 +28,9 @@ const Caruselbattlegraund = () => {
         <p>Online medical supplies</p>
         <h1>Get Your Vitamins</h1>
         <h1>& Minerals</h1>
-        <button>SHOP NOW</button>
+        <Link to="/shop" >
+  <button>SHOP NOW</button>
+</Link>
       </Bigconteynormenu>
 
       

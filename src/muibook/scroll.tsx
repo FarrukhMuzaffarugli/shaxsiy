@@ -3,12 +3,29 @@ import { Box, IconButton, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { products } from "../mockdate/tabletka";
+import React from "react"; 
 
-const ScrollableColumn = ({ onImageSelect }) => {
-  const [startIndex, setStartIndex] = useState(0);
+interface Product {
+  id: number;
+  image: string;
+  name: string;
+  originalPrice: number;
+  discountedPrice: number;
+
+}
+
+interface ScrollableColumnProps {
+  onImageSelect: (product: Product) => void;
+  
+}
+
+type Direction = 'up' | 'down';
+
+const ScrollableColumn: React.FC<ScrollableColumnProps> = ({ onImageSelect }) => {
+  const [startIndex, setStartIndex] = useState<number>(0);
   const visibleItemsCount = 3;
 
-  const scroll = (direction) => {
+  const scroll = (direction: Direction) => {
     if (direction === "up") {
       setStartIndex((prevIndex) =>
         prevIndex === 0 ? products.length - visibleItemsCount : prevIndex - 1
@@ -57,7 +74,7 @@ const ScrollableColumn = ({ onImageSelect }) => {
           position: "relative",
         }}
       >
-        {currentVisibleProducts.map((product) => {
+        {currentVisibleProducts.map((product: Product) => {
           const discountPercentage = Math.round(
             ((product.originalPrice - product.discountedPrice) / product.originalPrice) * 100
           );
@@ -71,7 +88,6 @@ const ScrollableColumn = ({ onImageSelect }) => {
                 cursor: "pointer",
               }}
               onClick={() => onImageSelect(product)}
-
             >
               <img
                 src={product.image}
@@ -82,7 +98,7 @@ const ScrollableColumn = ({ onImageSelect }) => {
                   borderRadius: "8px",
                 }}
               />
-            
+
               <Typography
                 sx={{
                   position: "absolute",
@@ -97,7 +113,7 @@ const ScrollableColumn = ({ onImageSelect }) => {
               >
                 {discountPercentage}% OFF
               </Typography>
-         
+
               <Box
                 sx={{
                   position: "absolute",
@@ -140,6 +156,7 @@ const ScrollableColumn = ({ onImageSelect }) => {
 };
 
 export default ScrollableColumn;
+
 
 
 

@@ -14,7 +14,7 @@ export const blogdata = [
     "tags": ["Health", "Vitamins", "Nutrients"],
     "postedBy": "John Doe",
     "postedDate": "2023-12-01",
-    "rating": 4.7,
+    "rating": 3.7,
     "comments": [
       {
         "user": "John Doe",

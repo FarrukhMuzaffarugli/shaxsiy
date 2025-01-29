@@ -101,7 +101,7 @@ const handleShare = (platform: string) => {
   <Blogdiv>
         <h1>Blog</h1>
         <p>
-          <HomeText>Home/ Blog</HomeText> / <BlogText> The Family During the COVID-19 Pandemic</BlogText>
+          <HomeText>Home/ Blog</HomeText> / <BlogText>  {blog.title} </BlogText>
         </p>
       </Blogdiv>
 
@@ -219,7 +219,7 @@ const handleShare = (platform: string) => {
 </Comments1>
 
 <Commentscomponent/>
-{/* <Yangicomentcomponent/> */}
+
 
 </Comments>
 

@@ -76,9 +76,9 @@ export default function FreeSoloCreateOption() {
         <li {...props}>{option.title}</li>
       )}
       sx={{
-        width: 460,
+        width: 459,
         height: 56,
-        borderRadius: 48,
+        borderRadius: 60,
         backgroundColor: '#80B4FF',
         '& .MuiOutlinedInput-root': {
           '& fieldset': {

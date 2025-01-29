@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ToggleButton } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-export default function ToggleFavoriteButton() {
+export default function FavoriteButton() {
   const [selected, setSelected] = useState(false);
 
   return (
@@ -12,11 +12,12 @@ export default function ToggleFavoriteButton() {
       onChange={() => setSelected(!selected)}
       color="error"
       size="small"
+      aria-label="toggle favorite"
       sx={{
-        width: 40,
-        height: 40,
-        minWidth: 40,
-        p: 0,
+        borderRadius: 60,
+        width: 54, 
+        minWidth: 54, 
+        p: 0, 
         backgroundColor: "#fff !important",
         "&:hover": {
           backgroundColor: "#f0f0f0 !important"
@@ -34,7 +35,8 @@ export default function ToggleFavoriteButton() {
     >
       <FavoriteIcon
         sx={{
-          fontSize: 20
+          fontSize: 24, 
+          color: selected ? "error.main" : "inherit" 
         }}
       />
     </ToggleButton>
