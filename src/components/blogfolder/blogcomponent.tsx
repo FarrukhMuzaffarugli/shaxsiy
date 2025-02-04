@@ -105,7 +105,6 @@ const BlogComponent = () => {
         ))}
       </Blogdiv1>
 
-      {/* 🔵 Pagination */}
       <div style={{ display: "flex", justifyContent: "center", marginTop: "50px", gap: "12px" }}>
         {Array.from({ length: totalPages }, (_, index) => (
           <button

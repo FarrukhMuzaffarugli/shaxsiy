@@ -8,6 +8,7 @@ import FamilycatigoryComponent from "./familycare/familycatigory";
 import BlogComponent from "./blogfolder/blogcomponent";
 import BloginfoConponent from "./blogfolder/bloginfo";
 import Shopcomponent from "./shoppapka/shop";
+import ShopinfoComponent from "./shoppapka/shopinfo";
 
 const AppRouter: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter: React.FC = () => {
         <Route path="/blog" element={<BlogComponent />} />
         <Route path="/blog/:id" element={<BloginfoConponent/>} />
         <Route path="/shop" element={<Shopcomponent/>} />
+        <Route path="/product/:id" element={<ShopinfoComponent/>} />
       </Routes>
       <Footercomponent />
     </>

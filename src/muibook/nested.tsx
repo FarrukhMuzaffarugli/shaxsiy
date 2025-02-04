@@ -194,7 +194,8 @@ export function NestedList({ uzatishClassify}: NestedListProps) {
     const handleClick = () => {
       setOpen(!open);
     };
-  
+   
+   
     const handleChange: SliderProps["onChange"] = (_event, newValue) => {
       const newRange = newValue as [number, number];
       setPriceRange(newRange); 

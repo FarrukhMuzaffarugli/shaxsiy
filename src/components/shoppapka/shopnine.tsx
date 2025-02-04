@@ -5,6 +5,7 @@ import { TBiodori } from "../../mock/Tdorilar";
 import StarRating from "../StarRating";
 import { useState } from "react";
 import ToggleFavoriteButton from "../../muibook/likeuchun";
+import { Link } from "react-router-dom";
 
 const Shopninecomponent = () => {
   const [currentPage, setCurrentPage] = useState(1); 
@@ -23,8 +24,9 @@ const Shopninecomponent = () => {
   return (
     <>
       <Shopnine>
+
         {currentItems.map((item) => (
-          <Shopthree1 key={item.id}>
+         <Link to={`/product/${item.id}`} key={item.id}> <Shopthree1 key={item.id}>
             <Imagewrapper1>
             <div style={{ position: "relative" }}>
               <img src={item.image} alt="image" />
@@ -119,7 +121,9 @@ const Shopninecomponent = () => {
               )}
             </p>
           </Shopthree1>
+          </Link>
         ))}
+
       </Shopnine>
 
       <div

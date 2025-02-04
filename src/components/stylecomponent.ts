@@ -7,7 +7,8 @@ import imunutet from "../Rasm/imunutet.jpg"
 import ukol from "../Rasm/ukol.svg"
 import bugdoy from "../Rasm/bugdoy.svg"
 import imgbos from '../Rasm/imunutetbots.webp'
-import magazin from '../Rasm/magazin.jpg'
+import magazin from '../Rasm/medical.jpg'
+import tabsimg from "../Rasm/tabsimg.jpg"
 
 interface BigconteynorProps {
   bgImage: string;
@@ -420,6 +421,7 @@ button {display: flex;
     width: 199px;
 padding: 16px 32px;
 justify-content: center;
+border: none;
 align-items: center;
 gap: 4px;
 border-radius: 56px;
@@ -568,7 +570,7 @@ gap: 30px;
 margin-top: 50px;
 `
 
-//
+
 export const B4menuc = styled.div`
 display: grid;
 grid-template-areas: "1 1 1";
@@ -824,7 +826,6 @@ export const Ioverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(234, 230, 230, 0.4); */
   display: flex;
   align-items: end;
   justify-content: center;
@@ -1404,8 +1405,6 @@ export const Divider = styled.div`
   margin: 14px;
   width: 100%;
   color: var(--Secondary-90, #2D3F59);
-
-  /* Matn uslubi */
   font-family: Jost, sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -1413,7 +1412,7 @@ export const Divider = styled.div`
   line-height: 28px;
   letter-spacing: 0.03px;
   position: relative;
-  text-align: center; /* Matnni markazga hizalash */
+  text-align: center; 
 
   &::before,
   &::after {
@@ -1649,8 +1648,8 @@ export const BadgeContainer = styled.div`
   position: absolute;
   top: 10px;
   right: -10px;
-  background: #80b4ff; /* Badge fon rangi */
-  color: var(--Gray-Scale-0, #fff); /* Matn rangi */
+  background: #80b4ff; 
+  color: var(--Gray-Scale-0, #fff); 
   font-family: Jost;
   font-size: 14px;
   font-style: normal;
@@ -1658,7 +1657,7 @@ export const BadgeContainer = styled.div`
   line-height: 20px;
   letter-spacing: 0.035px;
   padding: 5px 10px;
-  border-radius: 30px 0px 0px 30px; /* Burchaklar uchun radius */
+  border-radius: 30px 0px 0px 30px; 
   width: 82px;
   height: 26px;
   display: flex;
@@ -1675,7 +1674,7 @@ export const BadgeContainer = styled.div`
     background-color: #5691e0; 
     clip-path: polygon(0 0, 100% 0, 0 100%); 
   }
-`;
+`
 
 export const Bigcontenor13 = styled.div`
 display: flex;
@@ -1697,12 +1696,11 @@ height: 636px;
 h1{
   color: var(--Secondary-90, #2D3F59);
 margin-top: 4px;
-/* H3/SemiBold */
 font-family: Jost;
 font-size: 48px;
 font-style: normal;
 font-weight: 600;
-line-height: 52px; /* 108.333% */
+line-height: 52px; 
 text-transform: capitalize;
 }
 h2{
@@ -1753,7 +1751,7 @@ transition: all 0.3s ease;
   background-color: #004499;
   transform: scale(0.95);
 }
-`;
+`
 
 
 export const Bigcontenor132 = styled.div`
@@ -1769,20 +1767,20 @@ img{
 
 `
 export const Ovozlar = styled.div`
-  display: flex; /* Inline-flex o'rniga flex */
+  display: flex; 
   margin-top: 116px;
   padding: 30px 60px;
   align-items: flex-end;
-  gap: 90px; /* Gapni olib tashladik, chunki chiziq uchun border ishlatamiz */
+  gap: 90px; 
   width: 791px;
   height: 145.5px;
   border-radius: 15px;
   background: var(--Gradient-color, linear-gradient(180deg, #8DC8FF 0%, #80B4FF 100%));
   z-index: 10;
 
-  /* Ichki divlar */
+
   & > div {
-    flex: 1; /* Har bir div bir xil kenglikka ega bo'ladi */
+    flex: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2029,16 +2027,16 @@ button {
     padding: 10px 30px;
     color: var(--Gray-Scale-0, #FFF);
     background: #405A80;
-    /* H6/Medium */
+   
     font-family: Jost;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 140% */
+    line-height: 28px; 
     letter-spacing: 0.03px;
     border-radius: 5px;
     border: 1px solid var(--Gray-Scale-0, #FFF);
-    transition: all 0.3s ease; /* Animatsiya qo'shildi */
+    transition: all 0.3s ease; 
   }
 
   button:hover {
@@ -2065,16 +2063,15 @@ button {
     padding: 10px 30px;
     color: var(--Gray-Scale-0, #FFF);
     background: #405A80;
-    /* H6/Medium */
     font-family: Jost;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 140% */
+    line-height: 28px; 
     letter-spacing: 0.03px;
     border-radius: 5px;
     border: 1px solid var(--Gray-Scale-0, #FFF);
-    transition: all 0.3s ease; /* Animatsiya qo'shildi */
+    transition: all 0.3s ease; 
   }
 
   button:hover {
@@ -2098,8 +2095,6 @@ height: 260px;
 
 h1{
   color: var(--Gray-Scale-0, #FFF);
-
-/* H4/Medium */
 font-family: Jost;
 font-size: 34px;
 font-style: normal;
@@ -2121,12 +2116,11 @@ export const Footerdiv41 = styled.div`
   p {
     color: var(--Gray-Scale-0, #FFF);
 
-    /* Body 1/Regular */
     font-family: Jost;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
     letter-spacing: 0.08px;
     transition: all 0.3s ease; 
   }
@@ -2149,12 +2143,11 @@ background-image: url('https://www.dphealthnow.com/wp-content/uploads/2016/05/bl
 h1{
   color: var(--Secondary-80, #405A80);
 margin-top: 60px;
-/* H2/SemiBold */
 font-family: Jost;
 font-size: 60px;
 font-style: normal;
 font-weight: 600;
-line-height: 68px; /* 113.333% */
+line-height: 68px; 
 letter-spacing: -0.3px;
 }
 
@@ -2165,12 +2158,12 @@ p{
 export const HomeText = styled.span`
  color: var(--Gray-Scale-50, #727272);
 
-/* Body 1/Regular */
+
 font-family: Jost;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 24px; /* 150% */
+line-height: 24px; 
 letter-spacing: 0.08px;
 `;
 
@@ -2178,7 +2171,6 @@ export const BlogText = styled.span`
 
   color: var(--Secondary-70, #5375A6);
 
-/* Body 1/Medium */
 font-family: Jost;
 font-size: 16px;
 font-style: normal;
@@ -2379,12 +2371,12 @@ margin-top: 36px;
 p{
   color: var(--Gray-Scale-50, #727272);
 
-/* Body 1/Regular */
+
 font-family: Jost;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 24px; /* 150% */
+line-height: 24px;
 letter-spacing: 0.08px;
 }
 
@@ -2506,12 +2498,11 @@ h2{
   color: var(--Primary-95, #181C25);
   border: none;
   border-bottom: solid 1px rgb(185, 180, 180);
-/* H6/SemiBold */
 font-family: Urbanist;
 font-size: 20px;
 font-style: normal;
 font-weight: 600;
-line-height: 24px; /* 120% */
+line-height: 24px; 
 letter-spacing: 0.03px;
 }
 
@@ -3038,6 +3029,7 @@ letter-spacing: -0.24px;
 export const Shoopdiv = styled.div`
 display: flex;
 flex-direction: column;
+align-items: center;
 width: 100%;
 height: 100%;
 `
@@ -3663,3 +3655,311 @@ export const filterTagStyle = {
   borderRadius: "5px",
   display: "inline-block",
 };
+
+export const Shopinfo = styled.div`
+width: 100%;
+height: 910px;
+display: flex;
+gap: 30px;
+margin-top: 100px;
+justify-content:center;
+padding: 0 5%;
+
+`
+export const Shopinfo1 = styled.div`
+width: 705px;
+height: 910px;
+display: flex;
+flex-direction: column;
+gap: 41px;
+
+
+
+`
+export const Shopinfo11 = styled.div`
+width: 705px;
+height: 707px;
+display: flex;
+img{
+  width: 705px;
+height: 707px;
+display: flex;
+border-radius: 15px;
+border: solid 1px black;
+}
+
+`
+export const Shopinfo12 = styled.div`
+width: 704px;
+height: 707px;
+display: flex;
+gap: 20px;
+img{
+  width: 161px;
+height: 162px;
+border-radius: 15px;
+background: var(--Gray-Scale-5, #D9D9D9);
+
+}
+
+`
+export const Shopinfo2 = styled.div`
+width: 705px;
+height: auto;
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+
+h1{
+  color: var(--Primary-95, #181C25);
+
+/* H5/Medium */
+font-family: Jost;
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+line-height: 40px; /* 153.846% */
+}
+
+p{
+  display: flex;
+  color: var(--Gray-Scale-50, #727272);
+
+/* Body 1/Medium */
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+gap: 5px;
+p{
+  color: var(--Gray-Scale-70, #454545);
+
+/* Body 1/SemiBold */
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+}
+
+h6{
+  color: var(--Gray-Scale-50, #727272);
+text-align: justify;
+
+/* Body 1/Regular */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+
+}
+
+h3{
+  color: var(--Success-60, #06C270);
+text-align: justify;
+
+/* Body 1/SemiBold */
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+display: flex;
+gap: 10px;
+}
+
+h4{
+  color: var(--Success-60,rgb(169, 21, 21));
+text-align: justify;
+display: flex;
+/* Body 1/SemiBold */
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+gap: 10px;
+}
+
+button {
+  width: 88px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+  border: 1px solid var(--Background-Elevation-Light-02, #FFF);
+  background: var(--Gray-Scale-0, #FFF);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14);
+  transition: all 0.3s ease-in-out;
+  color: var(--Gray-Scale-20, #B7B7B7);
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background: #FFC12B;
+  border-color: #FFA500; 
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  transform: scale(1.05);
+}
+
+
+button:active,
+button:focus {
+  background: #FFC12B !important; 
+  border-color: #FFA500 !important;
+  color: white !important;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+h2{
+  color: var(--Gray-Scale-70, #454545);
+
+/* Body 1/SemiBold */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+
+
+
+
+
+`
+
+export const Shopinfo3 = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 350px;
+h5{
+  color: var(--Secondary-50, #80B4FF);
+
+/* H5/SemiBold */
+font-family: Jost;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 36px; /* 138.462% */
+
+h5{
+  color: var(--Secondary-70, #5375A6);
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+}
+img{
+  width: 20px;
+  height: 20px;
+}
+
+
+`
+export const Shopinfo5 = styled.div`
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-top: 25px;
+
+p{
+  color: var(--Gray-Scale-50, #727272);
+text-align: justify;
+display: flex;
+gap: 5px;
+/* Body 1/Regular */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+p{
+  color: var(--Gray-Scale-70, #454545);
+text-align: justify;
+
+/* Body 1/SemiBold */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+}
+
+`
+ export const Deccriptiondiv = styled.div`
+ display: flex;
+ flex-direction: column;
+ gap: 19px;
+width: 100%;
+height: 182px;
+margin-top: 50px;
+p{
+  color: var(--Gray-Scale-50, #727272);
+
+/* Body 1/Regular */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+}
+
+
+ `
+
+export const Deccriptiondiv1 = styled.div`
+width: 100%;
+height: 820px;
+flex-shrink: 0;
+background-image: url(${tabsimg});
+background-position: center;
+background-size: contain;
+padding: 98px;
+display: flex;
+justify-content: end;
+align-items: center;
+h1{
+  color: var(--Gray-Scale-0, #2D3F59);
+font-family: Jost;
+font-size: 80px;
+font-style: normal;
+font-weight: 600;
+line-height: 104px; /* 130% */
+letter-spacing: -1.2px;
+width: 405px;
+}
+
+`
