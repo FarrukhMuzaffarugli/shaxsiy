@@ -12,17 +12,18 @@ import {
   N4navbar,
   N4navbar1,
 } from "../stylecomponent";
-import { Biodori } from "../../mock/Doridate"; // ✅ To‘g‘ri mock data
+
 import arrow from "../../Rasm/Arrow.svg";
 import ToggleFavoriteButton from "../../muibook/likeuchun";
 import StarRating from "../StarRating";
 import savatcha1 from "../../Rasm/savatchaicon.svg";
 import kozcha from "../../Rasm/koz.svg";
 import smalllogo from "../../Rasm/small title.svg";
+import { TBiodori, TDorilar } from "../../mock/Tdorilar";
 
 const FamilycatigoryComponent: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [filteredProducts, setFilteredProducts] = useState(Biodori); // ✅ To‘g‘ri data
+  const [filteredProducts, setFilteredProducts] = useState<TDorilar[]>(TBiodori); 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const itemsPerPage = 20;
 
@@ -53,12 +54,12 @@ const FamilycatigoryComponent: React.FC = () => {
       }
 
       const filtered = sexCategory
-        ? Biodori.filter((product) => product.sex === sexCategory)
-        : Biodori;
+        ? TBiodori.filter((product) => product.sex === sexCategory || product.sex === "unisex")
+        : TBiodori;
 
       setFilteredProducts(filtered);
     } else {
-      setFilteredProducts(Biodori);
+      setFilteredProducts(TBiodori);
     }
 
     setCurrentIndex(0);
@@ -172,5 +173,6 @@ const FamilycatigoryComponent: React.FC = () => {
 };
 
 export default FamilycatigoryComponent;
+
 
 

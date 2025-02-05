@@ -302,6 +302,8 @@ flex-direction: column;
 width: 139px;
 height: 600px;
 
+
+
 `
 export const Contenor3menu2 = styled.div`
 display: flex;

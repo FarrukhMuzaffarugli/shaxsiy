@@ -1,6 +1,5 @@
 import  { useState, useEffect } from "react";
 import ScrollableColumn from "../muibook/scroll";
-import { products } from "../mockdate/tabletka";
 import { Bigconteyno, Bigcontenor2,  Contenor1,  Contenor3menu, Contenor3menu1, Contenor3menu2, Contenor3menu3, Conteynormenu1, Conteynormenu2, Menu1, Menu2, Menu3, Bigconteynor3, Contenor3menu4, Contenor3menu5, Contenor3menu6, B4menu, B4menu1, B4menu2, Bigcontenor5, Big5menu, Big5menu1, Big5menu2, Imagewrapper, Ioverlay, Bigcontenor6, Bigcontenor61, Bigcontenor62, Bigcontenor8, Bigcontenor81, Bigcontenor9, Bigcontenor91, Bigcontenor10, Bigcontenor101, Bigcontenor102, Bigcontenor11, Bigcontenor111, Bigcontenor112, Bigcontenor13, Bigcontenor131, Bigcontenor132, Divyurak1, Ovozlar, Ovozlar1,  
 } from "./stylecomponent";
 import savatcha from "../Rasm/savatcha.svg";
@@ -20,12 +19,10 @@ import { N4navbar1 } from "./stylecomponent";
 import CarouselArrows from "../muibook/carusel";
 import arrow from "../Rasm/Arrow.svg"
 import StarRating from "./StarRating";
-import { Biodori } from "../mock/Doridate";
 import savatcha1 from "../Rasm/savatchaicon.svg"
 import kozcha from "../Rasm/koz.svg"
 import ToggleFavoriteButton from "../muibook/likeuchun";
 import Catagoriy from "./catagoriy";
-import { Product } from "../mockdate/tabletka";
 import maslahat from "../Rasm/mmrasm.webp"
 import BestCatagoriy from "./bestcatagory";
 import IzohlarComponent from "./izohlar";
@@ -45,87 +42,65 @@ import tezyordam2 from "../Rasm/tezyordam2.webp"
 import tezyordam3 from "../Rasm/tezyordam3.jpg"
 import Caruselbattlegraund from "./caruselbattlegraund";
 import { Link } from "react-router-dom";
+import { TBiodori, TDorilar } from "../mock/Tdorilar";
 
 const HomeComponents = () => {
 
 //catagoriy
 
-const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+
+// Kategoriya filteri
+const [activeCategory, setActiveCategory] = useState<string | null>(null);
 const handleFilterSelect = (category: string | null) => {
   setActiveCategory(category);
 };
 
+// Jins bo‘yicha filterlash
+const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+const handleCategoryClick = (category: string) => {
+  setSelectedCategory(category);
+};
 
+const categorySexMap: { [key: string]: string | null } = {
+  'Baby And Infant': 'children',
+  'Senior Care': 'unisex',
+  'Women’s Care': 'women',
+  'Men’s Care': 'men',
+  'More...': null,
+};
 
-// filterlash jinsga qarab
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
-  };
-  
-  const categorySexMap: { [key: string]: string | null } = {
-    'Baby And Infant': 'children',
-    'Senior Care': 'unisex',
-    'Women’s Care': 'women',
-    'Men’s Care': 'men',
-    'More...': null,
-  };
-  
-  const filteredProducts = selectedCategory
-    ? Biodori.filter((product) => {
-        const sexFilter = categorySexMap[selectedCategory];
-        if (sexFilter === null) {
-          return true;
-        }
-        return product.sex === sexFilter || product.sex === 'unisex';
-      })
-    : Biodori; 
-  
+// **TDorilar** bo‘yicha mahsulotlarni filterlash
+const filteredProducts: TDorilar[] = selectedCategory
+  ? TBiodori.filter((product) => {
+      const sexFilter = categorySexMap[selectedCategory];
+      return sexFilter === null || product.sex === sexFilter || product.sex === 'unisex';
+    })
+  : TBiodori;
 
-
-
-
-
-
-//caruselfilterlashi 
+// **Karusel (Carousel) funksiyasi**
 const [currentIndex, setCurrentIndex] = useState(0);
 const itemsPerPage = 3;
 
-
 const handleNext = () => {
-  setCurrentIndex((prevIndex) =>
-    (prevIndex + 1) % filteredProducts.length
-  );
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredProducts.length);
 };
 
 const handlePrev = () => {
-  setCurrentIndex((prevIndex) =>
-    (prevIndex - 1 + filteredProducts.length) % filteredProducts.length
-  );
+  setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredProducts.length) % filteredProducts.length);
 };
 
-
-
-const visibleItems = [
-  ...filteredProducts.slice(currentIndex, currentIndex + itemsPerPage),
-];
-
+const visibleItems = filteredProducts.slice(currentIndex, currentIndex + itemsPerPage);
 
 if (visibleItems.length < itemsPerPage) {
-  visibleItems.push(
-    ...filteredProducts.slice(0, itemsPerPage - visibleItems.length)
-  );
+  visibleItems.push(...filteredProducts.slice(0, itemsPerPage - visibleItems.length));
 }
 
+// **Tanlangan mahsulot va vaqtni hisoblash (Countdown)**
+const [selectedImage, setSelectedImage] = useState<TDorilar | null>(
+  filteredProducts.length > 0 ? filteredProducts[0] : null
+);
 
-
-
-
-
-
-    //time uchun 
-  const [selectedImage, setSelectedImage] = useState<Product>(products[0]);
 const [countdown, setCountdown] = useState({
   days: 0,
   hours: 0,
@@ -137,29 +112,32 @@ useEffect(() => {
   if (!selectedImage || typeof selectedImage.discountDuration !== "number") return;
 
   const targetTime = new Date();
-  targetTime.setDate(targetTime.getDate() + selectedImage.discountDuration);
+  targetTime.setSeconds(targetTime.getSeconds() + selectedImage.discountDuration * 24 * 60 * 60); // 🔹 Kunlarni soniyaga o‘girish
 
-  const timer = setInterval(() => {
+  const updateCountdown = () => {
     const now = new Date();
     const timeDiff = targetTime.getTime() - now.getTime();
 
     if (timeDiff > 0) {
-      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-      setCountdown({ days, hours, minutes, seconds });
+      setCountdown({
+        days: Math.floor(timeDiff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((timeDiff % (1000 * 60)) / 1000),
+      });
     } else {
       setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       clearInterval(timer);
     }
-  }, 1000);
+  };
+
+  updateCountdown(); // 🔹 Dastlab yangilash
+  const timer = setInterval(updateCountdown, 1000);
 
   return () => clearInterval(timer);
-}, [selectedImage]);
+}, [selectedImage]); // 🔹 Faqat `selectedImage` o‘zgarganda qayta hisoblash
+
+
 
 
 
@@ -272,6 +250,7 @@ useEffect(() => {
         <h2>Best Vitamin Offer For Our Customers</h2>
 
         <Contenor3menu>
+
           <Contenor3menu1>
           <ScrollableColumn
   products={filteredProducts}
@@ -284,122 +263,131 @@ useEffect(() => {
           </Contenor3menu1>
 
           <Contenor3menu2>
-            {selectedImage && (
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  height: "100%",
-                  border: "2px solid #000",
-                  borderRadius: "10px",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src={selectedImage.image}
-                  alt="Selected"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "5px",
-                    left: "5px",
-                    backgroundColor: "rgba(255, 0, 0, 0.7)",
-                    color: "#fff",
-                    padding: "2px 8px",
-                    fontSize: "12px",
-                    borderRadius: "5px",
-                  }}
-                >
-                  {Math.round(
-                    ((selectedImage.originalPrice -
-                      selectedImage.discountedPrice) /
-                      selectedImage.originalPrice) *
-                      100
-                  )}
-                  % OFF
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "5px",
-                    left: "5px",
-                    backgroundColor: "rgba(0, 0, 0, 0.6)",
-                    color: "#fff",
-                    padding: "5px",
-                    borderRadius: "5px",
-                    textAlign: "center",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      textDecoration: "line-through",
-                      margin: 0,
-                    }}
-                  >
-                    ${selectedImage.originalPrice.toFixed(2)}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: "bold",
-                      margin: 0,
-                    }}
-                  >
-                    ${selectedImage.discountedPrice.toFixed(2)}
-                  </p>
-                </div>
-              </div>
-            )}
-          </Contenor3menu2>
+  {selectedImage && (
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        border: "2px solid #000",
+        borderRadius: "10px",
+        overflow: "hidden",
+      }}
+    >
+      <img
+        src={selectedImage.image}
+        alt="Selected"
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      />
+      {/* 🔹 Chegirma foizi to‘g‘ri chiqadi */}
+      {selectedImage.discountedPrice !== null && (
+        <div
+          style={{
+            position: "absolute",
+            top: "5px",
+            left: "5px",
+            backgroundColor: "rgba(255, 0, 0, 0.7)",
+            color: "#fff",
+            padding: "2px 8px",
+            fontSize: "12px",
+            borderRadius: "5px",
+          }}
+        >
+          {Math.round(
+            ((selectedImage.originalPrice - selectedImage.discountedPrice) /
+              selectedImage.originalPrice) *
+              100
+          )}
+          % OFF
+        </div>
+      )}
 
-          <Contenor3menu3>
-            <Contenor3menu4>
-              <p>{countdown.days}</p>
-              <h6>Days</h6>
-              <p>{countdown.hours}</p>
-              <h6>Hours</h6>
-              <p>{countdown.minutes}</p>
-              <h6>Minuts</h6>
-              <p>{countdown.seconds}</p>
-              <h6>seconds</h6>
-            </Contenor3menu4>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "5px",
+          left: "5px",
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          color: "#fff",
+          padding: "5px",
+          borderRadius: "5px",
+          textAlign: "center",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "12px",
+            textDecoration: "line-through",
+            margin: 0,
+          }}
+        >
+          ${selectedImage.originalPrice.toFixed(2)}
+        </p>
+        <p
+          style={{
+            fontSize: "14px",
+            fontWeight: "bold",
+            margin: 0,
+          }}
+        >
+          ${(selectedImage.discountedPrice ?? selectedImage.originalPrice).toFixed(2)}
+        </p>
+      </div>
+    </div>
+  )}
+</Contenor3menu2>
 
-            <Contenor3menu5>
-              <h1>{selectedImage.name}</h1>
-              <div style={{ display: "flex", alignItems: "end" }}>
-                <h2>${selectedImage.discountedPrice}</h2>
-                <h3
-                  style={{
-                    textDecoration: "line-through",
-                    marginLeft: "10px",
-                    color: "#999",
-                  }}
-                >
-                  ${selectedImage.originalPrice}
-                </h3>
-              </div>
-              <p>{selectedImage.description}</p>
+<Contenor3menu3>
+  <Contenor3menu4>
+    <p>{countdown.days}</p>
+    <h6>Days</h6>
+    <p>{countdown.hours}</p>
+    <h6>Hours</h6>
+    <p>{countdown.minutes}</p>
+    <h6>Minutes</h6>
+    <p>{countdown.seconds}</p>
+    <h6>Seconds</h6>
+  </Contenor3menu4>
 
-              <Contenor3menu6>
-                <button>
-                  <img src={savatcha} alt="Add to cart" />
-                  <h4>ADD TO CART</h4>
-                </button>
-                <img src={like} alt="Like" style={{ marginLeft: "20px" }} />
-                <img
-                  src={tomon}
-                  alt="Navigate"
-                  style={{ marginLeft: "20px" }}
-                />
-              </Contenor3menu6>
-            </Contenor3menu5>
-          </Contenor3menu3>
+  {selectedImage && (
+    <Contenor3menu5>
+      <h1>{selectedImage.name}</h1>
+      <div style={{ display: "flex", alignItems: "end" }}>
+        <h2>
+          ${selectedImage.discountedPrice !== null
+            ? selectedImage.discountedPrice.toFixed(2)
+            : selectedImage.originalPrice.toFixed(2)}
+        </h2>
+        {selectedImage.discountedPrice !== null && (
+          <h3
+            style={{
+              textDecoration: "line-through",
+              marginLeft: "10px",
+              color: "#999",
+            }}
+          >
+            ${selectedImage.originalPrice.toFixed(2)}
+          </h3>
+        )}
+      </div>
+      <p>{selectedImage.description}</p>
+
+      <Contenor3menu6>
+        <button>
+          <img src={savatcha} alt="Add to cart" />
+          <h4>ADD TO CART</h4>
+        </button>
+        <img src={like} alt="Like" style={{ marginLeft: "20px" }} />
+        <img src={tomon} alt="Navigate" style={{ marginLeft: "20px" }} />
+      </Contenor3menu6>
+    </Contenor3menu5>
+  )}
+</Contenor3menu3>
+
+
         </Contenor3menu>
 
       </Bigconteynor3>

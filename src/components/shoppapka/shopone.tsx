@@ -156,7 +156,7 @@ const Shoponecomponent: React.FC<{
               style={{
                 display: "flex",
                 flexDirection: "column",
-                height: "84px",
+                height: "auto",
                 gap: "12px",
               }}
             >

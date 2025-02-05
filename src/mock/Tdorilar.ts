@@ -858,7 +858,7 @@ import img11 from "../Rasm/trasm11.webp";
 import img12 from "../Rasm/trasm12.webp";
 import img13 from "../Rasm/trasm13.jpg";
 // import img14 from "../Rasm/trasm14.webp";
-// import img15 from "../Rasm/trasm15.webp";
+import img15 from "../Rasm/trasm15.webp";
 // import img16 from "../Rasm/trasm16.webp";
 // import img17 from "../Rasm/trasm17.webp";
 import img18 from "../Rasm/trasm18.webp";
@@ -940,6 +940,7 @@ export const TBiodori: TDorilar[] = [
     dateAdded: new Date("2023-05-01"),
     origin: "Germany",
     productCode: "SC1234",
+    discountDuration: 10,
     variants: [
       { size: "300 pills", price: 15.99, discountedPrice: 12.99 },
       { size: "600 pills", price: 25.99, discountedPrice: 21.99 },
@@ -1008,6 +1009,7 @@ export const TBiodori: TDorilar[] = [
   dateAdded: new Date("2023-08-10"),
   origin: "Switzerland",
   productCode: "FC6789",
+  discountDuration: 15,
   variants: [
     { size: "120 capsules", price: 18.99, discountedPrice: 15.99 },
     { size: "240 capsules", price: 32.99, discountedPrice: 28.99 },
@@ -1036,6 +1038,77 @@ export const TBiodori: TDorilar[] = [
       reviewVideo: null,
     },
   ],
+},
+
+{
+  id: 3,
+  name: "FemCare Vitality Capsules",
+  description:
+    "Bu tabiiy o‘simlik kapsulalari ayollar uchun maxsus ishlab chiqilgan bo‘lib, kundalik energiya va immunitetni qo‘llab-quvvatlashga yordam beradi.",
+  category: "For Body",
+  sex: "women",
+  totalQuantity: 200,
+  stock: 50,
+  soldQuantity: 150,
+  benefits: [
+    "Energiya darajasini oshirish",
+    "Immunitetni mustahkamlash",
+    "Gormonal balansni saqlash",
+    "Qon aylanishini yaxshilash",
+    "Antioksidant himoya",
+    "Stressni kamaytirish"
+  ],
+  ingredients: [
+    "Ashwagandha ekstrakti",
+    "Zanjabil ildizi kukuni",
+    "Yashil choy ekstrakti",
+    "Vitamin B kompleksi",
+    "Omega-3 yog‘ kislotalari",
+    "Temir"
+  ],
+  usage: "Kuniga 2 kapsula, ovqatdan keyin iching.",
+  productCapacity: "60 capsules",
+  info:
+    "Mahsulotning tabiiy tarkibi ayollarga kundalik faoliyatlarini qo‘llab-quvvatlash uchun mo‘ljallangan.",
+  image: img15,
+  additionalImages: [img11, img12, img13],
+  productVideo: videomisol1,
+  rating: 4.5,
+  freeShippingThreshold: 70,
+  deliveryTime: "2-4 kun",
+  classify: "Herbal Supplement",
+  dateAdded: new Date("2023-08-20"),
+  origin: "Switzerland",
+  productCode: "FC6791",
+  variants: [
+    { size: "120 capsules", price: 17.99, discountedPrice: null },
+    { size: "240 capsules", price: 31.99, discountedPrice: null },
+    { size: "500 capsules", price: 54.99, discountedPrice: null }
+  ],
+  originalPrice: 31.99, 
+  discountedPrice: null, 
+  reviews: [
+    {
+      id: 1,
+      user: "Nilufar",
+      rating: 5,
+      comment:
+        "Ajoyib mahsulot! Har kuni iste'mol qilish tavsiya etiladi.",
+      date: new Date("2023-09-15"),
+      reviewImages: [img18, img19],
+      reviewVideo: "review4.mp4"
+    },
+    {
+      id: 2,
+      user: "Zilola",
+      rating: 4,
+      comment:
+        "Mahsulotning ta'siri tezda sezildi, lekin narxi biroz yuqori.",
+      date: new Date("2023-09-18"),
+      reviewImages: [img20],
+      reviewVideo: null
+    }
+  ]
 }
 
 
