@@ -31,9 +31,9 @@ import AccordionUsage from "../muibook/accardion";
 import ambulance from "../Rasm/ambulance.svg"
 import ambulance1 from "../Rasm/ordering.svg"
 import ambulance2 from "../Rasm/onlineicon.svg"
-import ambulance3 from "../Rasm/Fully.svg"
-import ambulance4 from "../Rasm/Easy.svg"
-import ambulance5 from "../Rasm/Moreicon.svg"
+import ambulance3 from "../Rasm/fully.svg"
+import ambulance4 from "../Rasm/easy.svg"
+import ambulance5 from "../Rasm/moreicon.svg"
 import SearchPrescription from "./fileupdate";
 import BlogpageComponent from "./blogpage";
 import tezyordam from "../Rasm/tezyordam.jpg"
