@@ -29,7 +29,7 @@ import IzohlarComponent from "./izohlar";
 import BasicModal from "../muibook/modal";
 import AccordionUsage from "../muibook/accardion";
 import ambulance from "../Rasm/ambulance.svg"
-import ambulance1 from "../Rasm/Ordering.svg"
+import ambulance1 from "../Rasm/ordering.svg"
 import ambulance2 from "../Rasm/onlineicon.svg"
 import ambulance3 from "../Rasm/Fully.svg"
 import ambulance4 from "../Rasm/Easy.svg"
