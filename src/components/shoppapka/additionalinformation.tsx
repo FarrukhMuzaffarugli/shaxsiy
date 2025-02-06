@@ -1,74 +1,67 @@
-import  { useMemo } from "react";
-import { TDorilar, TBiodori } from "../../mock/Tdorilar";
-import { 
-  Deccriptiondiv, 
-  Deccriptiondiv1, 
-  Deccriptiondiv2, 
-  Deccriptiondiv3, 
-  Imagewrapper1, 
-  Ioverlay, 
-  N4navbar, 
-  Shoopdiv, 
-  Shopthree1 
-} from "../stylecomponent";
-import barner from "../../Rasm/Bannerproduct.svg";
-import smalllogo from "../../Rasm/small title.svg";
 import { Link } from "react-router-dom";
+import { TBiodori, TDorilar } from "../../mock/Tdorilar";
+import { Additionalinformationdiv, Deccriptiondiv2, Deccriptiondiv3, Imagewrapper1, Ioverlay, N4navbar, Shoopdiv, Shopthree1 } from "../stylecomponent";
 import ToggleFavoriteButton from "../../muibook/likeuchun";
+import StarRating from "../StarRating";
+import { useMemo } from "react";
 import savatcha1 from "../../Rasm/savatchaicon.svg";
 import kozcha from "../../Rasm/koz.svg";
-import StarRating from "../StarRating";
+import smalllogo from "../../Rasm/small title.svg";
 
-interface DescriptionProps {
+
+
+interface AdditionalinformationProps {
   product: TDorilar;
 }
 
-const DescriptionComponent = ({ product }: DescriptionProps) => {
 
-  const relatedProducts = useMemo(() => {
-    
-    const sameCategoryProducts = TBiodori.filter(
-      (p) => p.category === product.category && p.id !== product.id
-    );
-  
-    return sameCategoryProducts.slice(0, 4);
-  }, [product.category, product.id]);
+const Additionalinformation = ({ product }: AdditionalinformationProps) => {
+
+     const relatedProducts = useMemo(() => {
+         
+         const sameCategoryProducts = TBiodori.filter(
+           (p) => p.category === product.category && p.id !== product.id
+         );
+       
+         return sameCategoryProducts.slice(0, 4);
+       }, [product.category, product.id]);
+
 
   return (
     <Shoopdiv>
-      <Deccriptiondiv>
-        <p>{product.description}</p>
-        <p>
-          {product.benefits.map((e) => `${e} `).toString().split(",")}
-        </p>
-        <p>
-          {product.ingredients.map((e) => `${e} `).toString().split(",")}
-        </p>
-        <p>{product.usage}</p>
-      </Deccriptiondiv>
 
-      <Deccriptiondiv1>
-        <h1>
-          Get Your <br />
-          Vitamins & <br />
-          Minerals
-        </h1>
-      </Deccriptiondiv1>
-
-      <Deccriptiondiv style={{ marginTop: "-50px" }}>
-        <p>{product.info}</p>
-      </Deccriptiondiv>
-
-      <div style={{ width: "100%", height: "654px" }}>
-        <img src={barner} alt="Banner" />
-      </div>
-
+    <Additionalinformationdiv>
       
-      <Deccriptiondiv>
-        <p>{product.contraindications}</p>
-      </Deccriptiondiv>
+    <table>
+        
+          <tr>
+          <td style={{ width:"151px"}}> <h1>Weight</h1>
+          </td>
+            <td> <p>{product.weight}</p></td>
+          </tr>
+          <tr>
+            <td style={{backgroundColor:"#D9D9D9", width:"151px"}}> <h1>Quantity</h1></td>
+            <td style={{backgroundColor:"#D9D9D9"}}><p>{product.quantity}</p></td>
+          </tr>
+          <tr>
+          <td style={{ width:"151px"}}> <h1>Color</h1></td>
+          <td><p>{product.color.join(", ")}</p></td>
+          </tr>
+          <tr>
+          <td style={{backgroundColor:"#D9D9D9", width:"151px"}}> <h1>Natural</h1></td>
+          <td style={{backgroundColor:"#D9D9D9"}}><p>{product.natural}</p></td>
+          </tr>
+          <tr>
+          <td style={{ width:"151px"}}> <h1>Packaging</h1></td>
+            <td><p>{product.packaging}</p></td>
+          </tr>
+       
+      </table>
 
-      <Deccriptiondiv2>
+
+    </Additionalinformationdiv>
+
+    <Deccriptiondiv2>
         
         <N4navbar style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div>
@@ -144,7 +137,7 @@ const DescriptionComponent = ({ product }: DescriptionProps) => {
                 <button>
                   <img src={savatcha1} alt="savatcha icon" />
                   <Link to={`/product/${related.id}`} key={related.id}> <img src={kozcha} alt="ko'zcha icon" /></Link>
-                  <ToggleFavoriteButton />
+                  <ToggleFavoriteButton/>
                 </button>
               </Ioverlay>
             </Imagewrapper1>
@@ -185,8 +178,6 @@ const DescriptionComponent = ({ product }: DescriptionProps) => {
       </Deccriptiondiv2>
 
     </Shoopdiv>
-  );
-};
-
-export default DescriptionComponent;
-
+  )
+}
+export default Additionalinformation

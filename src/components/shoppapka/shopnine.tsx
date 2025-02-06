@@ -26,7 +26,7 @@ const Shopninecomponent = () => {
       <Shopnine>
 
         {currentItems.map((item) => (
-         <Link to={`/product/${item.id}`} key={item.id}> <Shopthree1 key={item.id}>
+         <Shopthree1 key={item.id}>
             <Imagewrapper1>
             <div style={{ position: "relative" }}>
               <img src={item.image} alt="image" />
@@ -87,7 +87,7 @@ const Shopninecomponent = () => {
               <Ioverlay>
                 <button>
                   <img src={savatcha1} alt="savatcha icon" />
-                  <img src={kozcha} alt="ko'zcha icon" />
+                  <Link to={`/product/${item.id}`} key={item.id}> <img src={kozcha} alt="ko'zcha icon" /></Link>
                   <ToggleFavoriteButton />
                 </button>
               </Ioverlay>
@@ -121,7 +121,7 @@ const Shopninecomponent = () => {
               )}
             </p>
           </Shopthree1>
-          </Link>
+          
         ))}
 
       </Shopnine>

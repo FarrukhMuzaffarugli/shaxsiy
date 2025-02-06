@@ -1,29 +1,19 @@
-import  { useMemo } from "react";
-import { TDorilar, TBiodori } from "../../mock/Tdorilar";
-import { 
-  Deccriptiondiv, 
-  Deccriptiondiv1, 
-  Deccriptiondiv2, 
-  Deccriptiondiv3, 
-  Imagewrapper1, 
-  Ioverlay, 
-  N4navbar, 
-  Shoopdiv, 
-  Shopthree1 
-} from "../stylecomponent";
-import barner from "../../Rasm/Bannerproduct.svg";
-import smalllogo from "../../Rasm/small title.svg";
-import { Link } from "react-router-dom";
+import { TBiodori, TDorilar } from "../../mock/Tdorilar";
 import ToggleFavoriteButton from "../../muibook/likeuchun";
+import StarRating from "../StarRating";
+import { useMemo } from "react";
 import savatcha1 from "../../Rasm/savatchaicon.svg";
 import kozcha from "../../Rasm/koz.svg";
-import StarRating from "../StarRating";
+import smalllogo from "../../Rasm/small title.svg";
+import { Additionalinformationdiv1, Deccriptiondiv2, Deccriptiondiv3, Imagewrapper1, Ioverlay, N4navbar, Shoopdiv, Shopthree1 } from "../stylecomponent";
+import { Link } from "react-router-dom";
 
-interface DescriptionProps {
+interface ReviewsComponentnProps {
   product: TDorilar;
 }
 
-const DescriptionComponent = ({ product }: DescriptionProps) => {
+
+const ReviewsComponent = ({product}  : ReviewsComponentnProps) => {
 
   const relatedProducts = useMemo(() => {
     
@@ -35,40 +25,23 @@ const DescriptionComponent = ({ product }: DescriptionProps) => {
   }, [product.category, product.id]);
 
   return (
-    <Shoopdiv>
-      <Deccriptiondiv>
-        <p>{product.description}</p>
-        <p>
-          {product.benefits.map((e) => `${e} `).toString().split(",")}
-        </p>
-        <p>
-          {product.ingredients.map((e) => `${e} `).toString().split(",")}
-        </p>
-        <p>{product.usage}</p>
-      </Deccriptiondiv>
+     <Shoopdiv>
+  
+   <Additionalinformationdiv1>
 
-      <Deccriptiondiv1>
-        <h1>
-          Get Your <br />
-          Vitamins & <br />
-          Minerals
-        </h1>
-      </Deccriptiondiv1>
+    
+   </Additionalinformationdiv1>
 
-      <Deccriptiondiv style={{ marginTop: "-50px" }}>
-        <p>{product.info}</p>
-      </Deccriptiondiv>
 
-      <div style={{ width: "100%", height: "654px" }}>
-        <img src={barner} alt="Banner" />
-      </div>
 
-      
-      <Deccriptiondiv>
-        <p>{product.contraindications}</p>
-      </Deccriptiondiv>
 
-      <Deccriptiondiv2>
+
+
+
+
+
+
+<Deccriptiondiv2>
         
         <N4navbar style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div>
@@ -184,9 +157,7 @@ const DescriptionComponent = ({ product }: DescriptionProps) => {
 
       </Deccriptiondiv2>
 
-    </Shoopdiv>
-  );
-};
-
-export default DescriptionComponent;
-
+     </Shoopdiv>
+  )
+}
+export default ReviewsComponent

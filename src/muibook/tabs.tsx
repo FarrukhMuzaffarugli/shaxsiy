@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DescriptionComponent from '../components/shoppapka/Description';
 import { TDorilar } from '../mock/Tdorilar';
+import Additionalinformation from '../components/shoppapka/additionalinformation';
+import ReviewsComponent from '../components/shoppapka/reviews';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -114,10 +116,10 @@ export default function FullWidthTabs({ product }: BasicTabsProps) {
         <DescriptionComponent product={product} />
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
-        Item Two
+        <Additionalinformation product={product} />
       </TabPanel>
       <TabPanel value={value} index={2} dir={theme.direction}>
-        Item Three
+       <ReviewsComponent product={product}/>
       </TabPanel>
     </Box>
   );

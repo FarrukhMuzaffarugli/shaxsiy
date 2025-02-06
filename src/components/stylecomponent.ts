@@ -530,7 +530,7 @@ align-items: end;
 export const N4navbar = styled.div`
 display: flex;
 flex-direction: column;
-width: 317px;
+width: auto;
 height: 84px;
 
 img{width:173px;
@@ -2672,7 +2672,9 @@ button{
   border-radius: 56px;
 background: var(--Gradient-color, linear-gradient(180deg, #8DC8FF 0%, #80B4FF 100%));
 color: var(--Gray-Scale-0, #FFF);
-
+border: none;
+width: auto;
+padding: 0 10px;
 /* Button/SemiBold */
 font-family: Jost;
 font-size: 16px;
@@ -3441,7 +3443,10 @@ border-radius: 56px;
 background: var(--Gradient-color, linear-gradient(180deg, #8DC8FF 0%, #80B4FF 100%));
 
 img{width: 19.5px;
-  height: 19.5px;}
+  height: 19.5px;
+border: none; 
+
+}
 }
 
 button:hover {
@@ -3551,6 +3556,7 @@ grid-template-areas: "1 1 1 1";
 width: 100%;
 height: 100%;
 gap: 30px;
+justify-content: start;
 `
 
 export const  Shoptwodiv = styled.div`
@@ -3963,5 +3969,68 @@ line-height: 104px; /* 130% */
 letter-spacing: -1.2px;
 width: 405px;
 }
+
+`
+
+export const Deccriptiondiv2 = styled.div`
+width: 1438px;
+height: 571px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 40px;
+margin-top: 100px;
+`
+export const Deccriptiondiv3 = styled.div`
+width: 1438px;
+height: 447px;
+display: grid;
+grid-template-areas: "1 1 1 1";
+justify-content: start;
+gap: 30px;
+
+`
+export const Additionalinformationdiv = styled.div`
+width: 1440px;
+height: 306px;
+margin-top: 50px;
+table{
+  border: 1px solid rgb(222, 211, 211);
+  width: 100%;
+  height: 100%;
+
+  h1{
+    color: var(--Gray-Scale-70, #454545);
+text-align: center;
+
+/* Body 1/Medium */
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+  }
+
+}
+table td {
+      border: 1px solid #ccc; 
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    table tr {
+      height: 61px; 
+      border-bottom: 1px solid #ccc;
+    }
+
+`
+export const Additionalinformationdiv1 = styled.div`
+height: 63px;
+width: 100%;
+justify-content: space-between;
+display: flex;
+
+
 
 `

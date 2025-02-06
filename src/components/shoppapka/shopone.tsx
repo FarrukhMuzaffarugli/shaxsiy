@@ -7,58 +7,80 @@ import savatcha from "../../Rasm/savatcha.svg";
 import ikkitomon from "../../Rasm/iconikkitomon.svg";
 import koz from "../../Rasm/Iconkoz.svg";
 import FavoriteButton from "./likeuchunn";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 
-const Shoponecomponent: React.FC<{ 
-  checkedClassify: string[]; 
-  priceRange: [number, number]; 
-  checkedCategorie: string[]; 
+const Shoponecomponent: React.FC<{
+  checkedClassify: string[];
+  priceRange: [number, number];
+  checkedCategorie: string[];
   selectedRatings: number[];
   onFilterChange: (filtered: TDorilar[]) => void;
-}> = ({ checkedClassify, priceRange, checkedCategorie, selectedRatings, onFilterChange })  => {
+}> = ({
+  checkedClassify,
+  priceRange,
+  checkedCategorie,
+  selectedRatings,
+  onFilterChange,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
 
-  const [currentPage, setCurrentPage] = React.useState(1);
-  const itemsPerPage = 4; 
+  // sortedData-ni memoizatsiya qilamiz:
+  const sortedData = useMemo(() => {
+    return [...TBiodori].sort((a, b) => a.id - b.id);
+  }, [TBiodori]);
 
-  const sortedData = [...TBiodori].sort((a, b) => a.id - b.id);
-
-
-  const filterdata = sortedData.filter((data) => {
-    const Category = checkedClassify.length > 0 ? checkedClassify.includes(data.classify) : true;
-    const matchesPrice =
-    (data.discountedPrice && data.discountedPrice >= priceRange[0] && data.discountedPrice <= priceRange[1]) ||
-    (data.originalPrice >= priceRange[0] && data.originalPrice <= priceRange[1]);
-    const Classfy = checkedCategorie.length > 0 ? checkedCategorie.includes(data.category) : true;
-    const Ratings = selectedRatings.length > 0 ? selectedRatings.includes(Math.floor(data.rating)) : true;
-    return Category && matchesPrice && Classfy && Ratings;
-     
-  });
-
+  // filterdata-ni memoizatsiya qilamiz:
+  const filterdata = useMemo(() => {
+    return sortedData.filter((data) => {
+      const categoryMatch =
+        checkedClassify.length > 0
+          ? checkedClassify.includes(data.classify)
+          : true;
+      const matchesPrice =
+        (data.discountedPrice &&
+          data.discountedPrice >= priceRange[0] &&
+          data.discountedPrice <= priceRange[1]) ||
+        (data.originalPrice >= priceRange[0] &&
+          data.originalPrice <= priceRange[1]);
+      const categoryFilter =
+        checkedCategorie.length > 0
+          ? checkedCategorie.includes(data.category)
+          : true;
+      const ratingsMatch =
+        selectedRatings.length > 0
+          ? selectedRatings.includes(Math.floor(data.rating))
+          : true;
+      return categoryMatch && matchesPrice && categoryFilter && ratingsMatch;
+    });
+  }, [sortedData, checkedClassify, priceRange, checkedCategorie, selectedRatings]);
 
   const totalPages = Math.ceil(filterdata.length / itemsPerPage);
 
-  
-  const currentItems = filterdata.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
+  // Hozirgi sahifadagi mahsulotlarni hisoblaymiz:
+  const currentItems = useMemo(() => {
+    return filterdata.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
+  }, [filterdata, currentPage, itemsPerPage]);
 
-  React.useEffect(() => {
-    setCurrentPage(1); 
+  // Agar checkedClassify o'zgarsa, currentPage ni 1 ga qaytaramiz:
+  useEffect(() => {
+    setCurrentPage(1);
   }, [checkedClassify]);
 
-//   console.log("Barcha mahsulotlar soni:", TBiodori.length);
-// console.log("Filtrlashdan keyin qolgan mahsulotlar:", filterdata.length);
-// console.log("Filtrlashdan chiqib ketgan mahsulotlar:", TBiodori.filter((data) => !filterdata.includes(data)));
-
+  // Filter natijasini ota komponentga yuborish:
   useEffect(() => {
-     onFilterChange(filterdata);
-   }, [filterdata, onFilterChange]);
+    onFilterChange(filterdata);
+  }, [filterdata, onFilterChange]);
 
   return (
     <Shoponediv>
       {currentItems.map((item) => (
+
         <Shoponediv1 key={item.id}>
 
 <Shoponediv2 style={{ position: "relative" }}>
@@ -189,7 +211,7 @@ const Shoponecomponent: React.FC<{
               <Shoponediv6>
                 <FavoriteButton />
                 <img src={ikkitomon} alt="" />
-                <img src={koz} alt="" />
+               <Link to={`/product/${item.id}`} key={item.id}> <img src={koz} alt="" /></Link>
               </Shoponediv6>
 
             </Shoponediv4>
@@ -197,6 +219,7 @@ const Shoponecomponent: React.FC<{
           </Shoponediv3>
 
         </Shoponediv1>
+
       ))}
 
       <div

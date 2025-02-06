@@ -1,51 +1,84 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ToggleFavoriteButton from "../../muibook/likeuchun";
 import { Imagewrapper1, Ioverlay, Shopthree, Shopthree1 } from "../stylecomponent";
 import savatcha1 from "../../Rasm/savatchaicon.svg";
 import kozcha from "../../Rasm/koz.svg";
 import { TBiodori, TDorilar } from "../../mock/Tdorilar";
 import StarRating from "../StarRating";
+import { Link } from "react-router-dom";
 
-const Shopthre: React.FC<{ 
-  checkedClassify: string[]; 
-  priceRange: [number, number]; 
-  checkedCategorie: string[]; 
+const Shopthre: React.FC<{
+  checkedClassify: string[];
+  priceRange: [number, number];
+  checkedCategorie: string[];
   selectedRatings: number[];
-  onFilterChange: (filtered: TDorilar[]) => void; 
-}> = ({ checkedClassify, priceRange, checkedCategorie, selectedRatings, onFilterChange  }) => {
-  const [currentPage, setCurrentPage] = useState(1); 
-  const [showAllButtons, setShowAllButtons] = useState(false); 
-  const itemsPerPage = 12; 
+  onFilterChange: (filtered: TDorilar[]) => void;
+}> = ({
+  checkedClassify,
+  priceRange,
+  checkedCategorie,
+  selectedRatings,
+  onFilterChange,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showAllButtons, setShowAllButtons] = useState(false);
+  const itemsPerPage = 12;
 
-  const sortedData = [...TBiodori].sort((a, b) => a.id - b.id);
+  // TBiodori ro'yxatini id bo'yicha saralashni memoizatsiya qilamiz:
+  const sortedData = useMemo(() => {
+    return [...TBiodori].sort((a, b) => a.id - b.id);
+  }, [TBiodori]);
 
-  const filterdata = sortedData.filter((data) => {
-    const Category = checkedClassify.length > 0 ? checkedClassify.includes(data.classify) : true;
-    const matchesPrice =
-    (data.discountedPrice && data.discountedPrice >= priceRange[0] && data.discountedPrice <= priceRange[1]) ||
-    (data.originalPrice >= priceRange[0] && data.originalPrice <= priceRange[1]);
-    const Classfy = checkedCategorie.length > 0 ? checkedCategorie.includes(data.category) : true;
-    const Ratings = selectedRatings.length > 0 ? selectedRatings.includes(Math.floor(data.rating)) : true;
-    return Category && matchesPrice && Classfy && Ratings;
-     
-  });
+  // Filtr natijalarini hisoblaymiz va memoizatsiya qilamiz:
+  const filterdata = useMemo(() => {
+    return sortedData.filter((data) => {
+      const categoryMatch =
+        checkedClassify.length > 0
+          ? checkedClassify.includes(data.classify)
+          : true;
+      const matchesPrice =
+        (data.discountedPrice &&
+          data.discountedPrice >= priceRange[0] &&
+          data.discountedPrice <= priceRange[1]) ||
+        (data.originalPrice >= priceRange[0] &&
+          data.originalPrice <= priceRange[1]);
+      const categoryFilter =
+        checkedCategorie.length > 0
+          ? checkedCategorie.includes(data.category)
+          : true;
+      const ratingsMatch =
+        selectedRatings.length > 0
+          ? selectedRatings.includes(Math.floor(data.rating))
+          : true;
+
+      return categoryMatch && matchesPrice && categoryFilter && ratingsMatch;
+    });
+  }, [sortedData, checkedClassify, priceRange, checkedCategorie, selectedRatings]);
 
   const totalPages = Math.ceil(filterdata.length / itemsPerPage);
 
+  // Hozirgi sahifadagi mahsulotlarni hisoblaymiz:
+  const currentItems = useMemo(() => {
+    return filterdata.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
+  }, [filterdata, currentPage, itemsPerPage]);
 
-   const currentItems = filterdata.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
+  // Filter natijasini ota komponentga yuborish:
   useEffect(() => {
     onFilterChange(filterdata);
   }, [filterdata, onFilterChange]);
+
+  console.log("salom");
+  
 
   return (
     <>
       <Shopthree>
         {currentItems.map((item) => (
+
+          
           <Shopthree1 key={item.id}>
             <Imagewrapper1>
               <div style={{ position: "relative" }}>
@@ -107,7 +140,7 @@ const Shopthre: React.FC<{
               <Ioverlay>
                 <button>
                   <img src={savatcha1} alt="savatcha icon" />
-                  <img src={kozcha} alt="ko'zcha icon" />
+                  <Link to={`/product/${item.id}`} key={item.id}> <img src={kozcha} alt="ko'zcha icon" /></Link>
                   <ToggleFavoriteButton />
                 </button>
               </Ioverlay>
@@ -141,6 +174,7 @@ const Shopthre: React.FC<{
               )}
             </p>
           </Shopthree1>
+
         ))}
       </Shopthree>
 

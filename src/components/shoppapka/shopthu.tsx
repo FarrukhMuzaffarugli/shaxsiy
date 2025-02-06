@@ -1,187 +1,219 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { TBiodori, TDorilar } from "../../mock/Tdorilar";
 import StarRating from "../StarRating";
-import { Shoponediv4, Shoponediv5, Shoponediv6, Shoptwodiv, Shoptwodiv1 } from "../stylecomponent";
+import {
+  Shoponediv4,
+  Shoponediv5,
+  Shoponediv6,
+  Shoptwodiv,
+  Shoptwodiv1,
+} from "../stylecomponent";
 import QuantityField from "./quantity";
 import savatcha from "../../Rasm/savatcha.svg";
 import FavoriteButton from "./likeuchunn";
+import { Link } from "react-router-dom";
 
-const Shopthu: React.FC<{ 
-  checkedClassify: string[]; 
-  priceRange: [number, number]; 
-  checkedCategorie: string[]; 
+const Shopthu: React.FC<{
+  checkedClassify: string[];
+  priceRange: [number, number];
+  checkedCategorie: string[];
   selectedRatings: number[];
   onFilterChange: (filtered: TDorilar[]) => void;
-}> = ({ checkedClassify, priceRange, checkedCategorie, selectedRatings, onFilterChange }) => {
-  const [currentPage, setCurrentPage] = useState(1); 
-  const [showAllButtons, setShowAllButtons] = useState(false); 
-  const itemsPerPage = 4; 
+}> = ({
+  checkedClassify,
+  priceRange,
+  checkedCategorie,
+  selectedRatings,
+  onFilterChange,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showAllButtons, setShowAllButtons] = useState(false);
+  const itemsPerPage = 4;
 
-  const sortedData = [...TBiodori].sort((a, b) => a.id - b.id); 
+  // sortedData-ni memoizatsiya qilamiz:
+  const sortedData = useMemo(() => {
+    return [...TBiodori].sort((a, b) => a.id - b.id);
+  }, [TBiodori]);
 
-  const filterdata = sortedData.filter((data) => {
-    const Category = checkedClassify.length > 0 ? checkedClassify.includes(data.classify) : true;
-    const matchesPrice =
-    (data.discountedPrice && data.discountedPrice >= priceRange[0] && data.discountedPrice <= priceRange[1]) ||
-    (data.originalPrice >= priceRange[0] && data.originalPrice <= priceRange[1]);
-    const Classfy = checkedCategorie.length > 0 ? checkedCategorie.includes(data.category) : true;
-    const Ratings = selectedRatings.length > 0 ? selectedRatings.includes(Math.floor(data.rating)) : true;
-    return Category && matchesPrice && Classfy && Ratings;
-     
-  });
+  // filterdata-ni memoizatsiya qilamiz:
+  const filterdata = useMemo(() => {
+    return sortedData.filter((data) => {
+      const categoryMatch =
+        checkedClassify.length > 0
+          ? checkedClassify.includes(data.classify)
+          : true;
+      const matchesPrice =
+        (data.discountedPrice &&
+          data.discountedPrice >= priceRange[0] &&
+          data.discountedPrice <= priceRange[1]) ||
+        (data.originalPrice >= priceRange[0] &&
+          data.originalPrice <= priceRange[1]);
+      const categoryFilter =
+        checkedCategorie.length > 0
+          ? checkedCategorie.includes(data.category)
+          : true;
+      const ratingsMatch =
+        selectedRatings.length > 0
+          ? selectedRatings.includes(Math.round(data.rating))
+          : true;
+      return categoryMatch && matchesPrice && categoryFilter && ratingsMatch;
+    });
+  }, [sortedData, checkedClassify, priceRange, checkedCategorie, selectedRatings]);
 
+  // Hozirgi sahifadagi mahsulotlarni hisoblaymiz:
+  const currentItems = useMemo(() => {
+    return filterdata.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
+  }, [filterdata, currentPage, itemsPerPage]);
 
+  const totalPages = Math.ceil(filterdata.length / itemsPerPage);
 
-  const totalPages = Math.ceil(filterdata.length / itemsPerPage); 
-
-  const currentItems = filterdata.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-  
-   useEffect(() => {
-      onFilterChange(filterdata);
-    }, [filterdata, onFilterChange]);
+  // Filter natijasini ota komponentga yuborish:
+  useEffect(() => {
+    onFilterChange(filterdata);
+  }, [filterdata, onFilterChange]);
 
   return (
     <>
       <Shoptwodiv>
-        {currentItems.map((iteam) => (
-          <Shoptwodiv1 key={iteam.id}>
+        
+        {currentItems.map((item) => (
+          <Shoptwodiv1 key={item.id}>
+            <Link to={`/product/${item.id}`} key={item.id}>
             <div style={{ position: "relative" }}>
-            <img src={iteam.image} alt="rasm" />
-            {iteam.discountedPrice && iteam.discountedPrice < iteam.originalPrice && (
-    <div
-    style={{
-      width:"44",
-      height:"32",
-      position: "absolute",
-      top: "10px",
-      right: "10px",
-      backgroundColor: "#FFC12B",
-      color: "var(--Gray-Scale-0, #FFF)", 
-      padding: " 8px",
-      borderRadius: "5px",
-      textAlign: "right",
-      fontFamily: "Montserrat",
-      fontSize: "12px",
-      fontStyle: "normal",
-      fontWeight: "700",
-      lineHeight: "16px", 
-    }}
-  >
-     - {Math.round(
-        ((iteam.originalPrice - iteam.discountedPrice) / iteam.originalPrice) * 100
-      )}
-      %
-    </div>
-  )}
-
-  {iteam.discountDuration !== undefined &&
-  iteam.dateAdded &&
-  new Date().getTime() - new Date(iteam.dateAdded).getTime() <=
-  iteam.discountDuration * 24 * 60 * 60 * 1000 && (
-    <div
-      style={{
-        width:"48",
-        height:"32",
-        position: "absolute",
-        top: "50px", 
-        right: "10px",
-        backgroundColor: "#80B4FF",
-        padding: " 8px",
-        borderRadius: "5px",
-        color: "var(--Gray-Scale-0, #FFF)",
-        textAlign: "right",
-        fontFamily: "Montserrat", 
-        fontSize: "12px",
-        fontStyle: "normal",
-        fontWeight: 500,
-        lineHeight: "16px", 
-      }}
-    >
-      New
-    </div>
-  )}
-            </div>
-            <div style={{padding:"0 10px"}}>
-              
-            <h1>{iteam.name}</h1>
-
-            <StarRating rating={iteam.rating} />
-
-            <p>
-              {iteam.discountedPrice && iteam.discountedPrice !== iteam.originalPrice ? (
-                <>
-                  <span style={{ marginRight: "8px" }}>
-                    ${iteam.discountedPrice.toFixed(2)}
-                  </span>
-                  <span
+              <img src={item.image} alt="rasm" />
+              {item.discountedPrice &&
+                item.discountedPrice < item.originalPrice && (
+                  <div
                     style={{
-                      textDecoration: "line-through",
-                      color: "var(--Gray-Scale-40, #898989)",
-                      fontFamily: "Jost",
-                      fontSize: "16px",
+                      width: "44",
+                      height: "32",
+                      position: "absolute",
+                      top: "10px",
+                      right: "10px",
+                      backgroundColor: "#FFC12B",
+                      color: "var(--Gray-Scale-0, #FFF)",
+                      padding: " 8px",
+                      borderRadius: "5px",
+                      textAlign: "right",
+                      fontFamily: "Montserrat",
+                      fontSize: "12px",
                       fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "24px",
-                      letterSpacing: "0.08px",
+                      fontWeight: "700",
+                      lineHeight: "16px",
                     }}
                   >
-                    ${iteam.originalPrice.toFixed(2)}
-                  </span>
-                </>
-              ) : (
-                <span>${iteam.originalPrice.toFixed(2)}</span>
-              )}
-            </p>
+                    -{" "}
+                    {Math.round(
+                      ((item.originalPrice - item.discountedPrice) /
+                      item.originalPrice) *
+                        100
+                    )}
+                    %
+                  </div>
+                )}
 
-            <div style={{ marginTop: "16px", height:"100px" }}>
-              {iteam.benefits.map((benefit, index) => (
-                <h2 key={index}>{benefit}</h2>
-              ))}
-            </div>
+              {item.discountDuration !== undefined &&
+                item.dateAdded &&
+                new Date().getTime() - new Date(item.dateAdded).getTime() <=
+                item.discountDuration * 24 * 60 * 60 * 1000 && (
+                  <div
+                    style={{
+                      width: "48",
+                      height: "32",
+                      position: "absolute",
+                      top: "50px",
+                      right: "10px",
+                      backgroundColor: "#80B4FF",
+                      padding: " 8px",
+                      borderRadius: "5px",
+                      color: "var(--Gray-Scale-0, #FFF)",
+                      textAlign: "right",
+                      fontFamily: "Montserrat",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "16px",
+                    }}
+                  >
+                    New
+                  </div>
+                )}
+            </div></Link>
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: "16px",
-                
-              }}
-            >
-              <h4>
-                Product Capacity: <h3>{iteam.productCapacity}</h3>
-              </h4>
-              <h4>
-                Origin: <h3>{iteam.origin}</h3>
-              </h4>
-              <h4>
-                Product Code: <h3>{iteam.productCode}</h3>
-              </h4>
-            </div>
+            <div style={{ padding: "0 10px" }}>
+              <h1>{item.name}</h1>
 
-            <Shoponediv4>
-              <QuantityField />
+              <StarRating rating={item.rating} />
 
-              <Shoponediv5>
-                <button>
-                  <img src={savatcha} alt="Add to cart" />
-                  <h5>ADD TO CART</h5>
-                </button>
-              </Shoponediv5>
+              <p>
+                {item.discountedPrice &&
+                item.discountedPrice !== item.originalPrice ? (
+                  <>
+                    <span style={{ marginRight: "8px" }}>
+                      ${item.discountedPrice.toFixed(2)}
+                    </span>
+                    <span
+                      style={{
+                        textDecoration: "line-through",
+                        color: "var(--Gray-Scale-40, #898989)",
+                        fontFamily: "Jost",
+                        fontSize: "16px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "24px",
+                        letterSpacing: "0.08px",
+                      }}
+                    >
+                      ${item.originalPrice.toFixed(2)}
+                    </span>
+                  </>
+                ) : (
+                  <span>${item.originalPrice.toFixed(2)}</span>
+                )}
+              </p>
 
-              <Shoponediv6>
-                <FavoriteButton />
-              </Shoponediv6>
-            </Shoponediv4>
+           
 
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection:"column",
+                  marginTop: "16px",
+                }}
+              >
+                <h4>
+                  Product Capacity: <h3>{item.productCapacity}</h3>
+                </h4>
+                <h4>
+                  Origin: <h3>{item.origin}</h3>
+                </h4>
+                <h4>
+                  Product Code: <h3>{item.productCode}</h3>
+                </h4>
+              </div>
+
+              <Shoponediv4>
+                <QuantityField />
+
+                <Shoponediv5>
+                  <button>
+                    <img src={savatcha} alt="Add to cart" />
+                    <h5>ADD TO CART</h5>
+                  </button>
+                </Shoponediv5>
+
+                <Shoponediv6>
+                  <FavoriteButton />
+                </Shoponediv6>
+              </Shoponediv4>
             </div>
           </Shoptwodiv1>
         ))}
       </Shoptwodiv>
 
-     
       <div
         style={{
           display: "flex",
@@ -228,7 +260,7 @@ const Shopthu: React.FC<{
               fontWeight: "bold",
             }}
           >
-            &gt; 
+            &gt;
           </button>
         )}
       </div>

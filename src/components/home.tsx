@@ -135,7 +135,7 @@ useEffect(() => {
   const timer = setInterval(updateCountdown, 1000);
 
   return () => clearInterval(timer);
-}, [selectedImage]); // 🔹 Faqat `selectedImage` o‘zgarganda qayta hisoblash
+}, [selectedImage]); // 
 
 
 

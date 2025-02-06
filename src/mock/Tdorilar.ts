@@ -844,6 +844,7 @@
 // ];
 
 
+
 import img1 from "../Rasm/kunchechak.jpg";
 import img2 from "../Rasm/trasm2.webp";
 import img3 from "../Rasm/trasm3.webp";
@@ -851,16 +852,11 @@ import img4 from "../Rasm/trasm4.webp";
 import img5 from "../Rasm/trasm5.webp";
 import img6 from "../Rasm/trasm6.webp";
 import img7 from "../Rasm/trasm7.webp";
-// import img8 from "../Rasm/trasm8.webp";
-// import img9 from "../Rasm/trasm9.jpg";
 import img10 from "../Rasm/trasm10.webp";
 import img11 from "../Rasm/trasm11.webp";
 import img12 from "../Rasm/trasm12.webp";
 import img13 from "../Rasm/trasm13.jpg";
-// import img14 from "../Rasm/trasm14.webp";
 import img15 from "../Rasm/trasm15.webp";
-// import img16 from "../Rasm/trasm16.webp";
-// import img17 from "../Rasm/trasm17.webp";
 import img18 from "../Rasm/trasm18.webp";
 import img19 from "../Rasm/trasm19.webp";
 import img20 from "../Rasm/trasm20.webp";
@@ -868,6 +864,7 @@ import img20 from "../Rasm/trasm20.webp";
 const videomisol = "/videos/video.MP4";
 const videomisol1 = "/videos/video1.mp4";
 
+// TDorilar interfeysini yangilaymiz: mavjud maydonlarga qo'shimcha xususiyatlar qo'shamiz.
 export interface TDorilar {
   id: number;
   name: string;
@@ -895,13 +892,12 @@ export interface TDorilar {
   origin: string;
   productCode: string;
   info: string | null;
-
+  contraindications?: string;
   variants: {
     size: string; 
     price: number;
     discountedPrice: number | null;
   }[];
-
   reviews: {
     id: number;
     user: string;
@@ -911,11 +907,16 @@ export interface TDorilar {
     reviewImages: string[];
     reviewVideo: string | null;
   }[];
+
+  
+  weight: string;       
+  quantity: number;      
+  color: string[];       
+  natural: string;      
+  packaging: string;   
 }
 
-
 export const TBiodori: TDorilar[] = [
-
   {
     id: 1,
     name: "Suncella Intimate Care Tablet",
@@ -929,7 +930,7 @@ export const TBiodori: TDorilar[] = [
     ingredients: ["Laktobakteriyalar", "Vitamin C", "Tabiiy o‘simlik ekstraktlari"],
     usage: "Kuniga 1 tabletka ovqatdan keyin qabul qiling.",
     productCapacity: "30 tablets",
-    info:"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat",
+    info: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     image: img1,
     additionalImages: [img2, img3, img4],
     productVideo: videomisol,
@@ -941,14 +942,14 @@ export const TBiodori: TDorilar[] = [
     origin: "Germany",
     productCode: "SC1234",
     discountDuration: 10,
+    contraindications: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam...",
     variants: [
       { size: "300 pills", price: 15.99, discountedPrice: 12.99 },
       { size: "600 pills", price: 25.99, discountedPrice: 21.99 },
-      { size: "1000 pills", price: 40.99, discountedPrice: 35.99 }, 
+      { size: "1000 pills", price: 40.99, discountedPrice: 35.99 },
     ],
     originalPrice: 25.99, 
     discountedPrice: 21.99, 
-
     reviews: [
       {
         id: 1,
@@ -969,152 +970,166 @@ export const TBiodori: TDorilar[] = [
         reviewVideo: null,
       },
     ],
-},
+  
+    weight: "500g",
+    quantity: 100,
+    color: ["White", "red"], 
+    natural: "No",        
+    packaging: "Box",
+  },
 
-{
-  id: 2,
-  name: "FemCare Herbal Capsules",
-  description: "Ayollar salomatligi va umumiy farovonligini oshirish uchun maxsus ishlab chiqilgan tabiiy o‘simlik kapsulalari. Bu mahsulot ayollarning reproduktiv tizimini mustahkamlash, gormonal muvozanatni tiklash va immun tizimini qo‘llab-quvvatlash uchun mo‘ljallangan. Uning tarkibida muhim vitaminlar, minerallar va o‘simlik ekstraktlari mavjud bo‘lib, ular tanaga yumshoq va samarali ta’sir ko‘rsatadi.",
-  category: "For Body",
-  sex: "women",
-  totalQuantity: 250,  
-  stock: 80,          
-  soldQuantity: 170, 
-  benefits: [
+  {
+    id: 2,
+    name: "FemCare Herbal Capsules",
+    description: "Ayollar salomatligi va umumiy farovonligini oshirish uchun maxsus ishlab chiqilgan tabiiy o‘simlik kapsulalari. Bu mahsulot ayollarning reproduktiv tizimini mustahkamlash, gormonal muvozanatni tiklash va immun tizimini qo‘llab-quvvatlash uchun mo‘ljallangan. Uning tarkibida muhim vitaminlar, minerallar va o‘simlik ekstraktlari mavjud bo‘lib, ular tanaga yumshoq va samarali ta’sir ko‘rsatadi.",
+    category: "For Body",
+    sex: "women",
+    totalQuantity: 250,  
+    stock: 80,          
+    soldQuantity: 170, 
+    benefits: [
       "Ayollar gormonal balansini tiklash va saqlash",
       "Reproduktiv tizimni qo‘llab-quvvatlash",
       "Organizmni tabiiy yo‘l bilan himoya qilish",
       "Qon aylanishini yaxshilash",
       "Antioksidant himoyani ta’minlash va immunitetni mustahkamlash",
       "Tana energiyasini ko‘tarish va charchoqni kamaytirish"
-  ],
-  ingredients: [
+    ],
+    ingredients: [
       "Ashwagandha ekstrakti",
       "Zanjabil ildizi kukuni",
       "Yashil choy ekstrakti",
       "Vitamin B kompleksi",
       "Omega-3 yog‘ kislotalari",
       "Temir va kalsiy"
-  ],
-  usage: "Kuniga 2 kapsula ovqatdan keyin iliq suv bilan iching. Eng yaxshi natijaga erishish uchun 3 oy davomida muntazam qabul qiling.",
-  productCapacity: "60 capsules",
-   info:"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat",
-  image: img10,
-  additionalImages: [img11, img12, img13 ],
-  productVideo: videomisol1,
-  rating: 4.5,
-  freeShippingThreshold: 70,
-  deliveryTime: "2-4 kun",
-  classify: "Herbal Supplement",
-  dateAdded: new Date("2023-08-10"),
-  origin: "Switzerland",
-  productCode: "FC6789",
-  discountDuration: 15,
-  variants: [
-    { size: "120 capsules", price: 18.99, discountedPrice: 15.99 },
-    { size: "240 capsules", price: 32.99, discountedPrice: 28.99 },
-    { size: "500 capsules", price: 55.99, discountedPrice: 49.99 }, 
-  ],
-  originalPrice: 32.99, 
-  discountedPrice: 28.99, 
+    ],
+    usage: "Kuniga 2 kapsula ovqatdan keyin iliq suv bilan iching. Eng yaxshi natijaga erishish uchun 3 oy davomida muntazam qabul qiling.",
+    productCapacity: "60 capsules",
+    info: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+    image: img10,
+    additionalImages: [img11, img12, img13],
+    productVideo: videomisol1,
+    rating: 4.5,
+    freeShippingThreshold: 70,
+    deliveryTime: "2-4 kun",
+    classify: "Herbal Supplement",
+    dateAdded: new Date("2023-08-10"),
+    origin: "Switzerland",
+    productCode: "FC6789",
+    discountDuration: 15,
+    contraindications: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat...",
+    variants: [
+      { size: "120 capsules", price: 18.99, discountedPrice: 15.99 },
+      { size: "240 capsules", price: 32.99, discountedPrice: 28.99 },
+      { size: "500 capsules", price: 55.99, discountedPrice: 49.99 },
+    ],
+    originalPrice: 32.99, 
+    discountedPrice: 28.99, 
+    reviews: [
+      {
+        id: 1,
+        user: "Madina",
+        rating: 5,
+        comment: "Bu kapsulalar mening umumiy holatimni ancha yaxshiladi. O‘zimni ancha bardam va energiyaga to‘la his qilyapman!",
+        date: new Date("2023-09-01"),
+        reviewImages: [img18, img19],
+        reviewVideo: "review2.mp4",
+      },
+      {
+        id: 2,
+        user: "Shahnoza",
+        rating: 4,
+        comment: "Yaxshi mahsulot, lekin etkazib berish biroz uzoq davom etdi. Ta’siri esa sezilarli va juda ijobiy.",
+        date: new Date("2023-09-05"),
+        reviewImages: [img20],
+        reviewVideo: null,
+      },
+    ],
+  
+    weight: "300g",
+    quantity: 200,
+    color: ["red", "green"], 
+    natural: "Yes",       
+    packaging: "Bottle",
+  },
 
-  reviews: [
-    {
-      id: 1,
-      user: "Madina",
-      rating: 5,
-      comment: "Bu kapsulalar mening umumiy holatimni ancha yaxshiladi. O‘zimni ancha bardam va energiyaga to‘la his qilyapman!",
-      date: new Date("2023-09-01"),
-      reviewImages: [img18, img19],
-      reviewVideo: "review2.mp4",
-    },
-    {
-      id: 2,
-      user: "Shahnoza",
-      rating: 4,
-      comment: "Yaxshi mahsulot, lekin etkazib berish biroz uzoq davom etdi. Ta’siri esa sezilarli va juda ijobiy.",
-      date: new Date("2023-09-05"),
-      reviewImages: [img20],
-      reviewVideo: null,
-    },
-  ],
-},
+  {
+    id: 3,
+    name: "FemCare Vitality Capsules",
+    description:
+      "Bu tabiiy o‘simlik kapsulalari ayollar uchun maxsus ishlab chiqilgan bo‘lib, kundalik energiya va immunitetni qo‘llab-quvvatlashga yordam beradi.",
+    category: "For Body",
+    sex: "women",
+    totalQuantity: 200,
+    stock: 50,
+    soldQuantity: 150,
+    benefits: [
+      "Energiya darajasini oshirish",
+      "Immunitetni mustahkamlash",
+      "Gormonal balansni saqlash",
+      "Qon aylanishini yaxshilash",
+      "Antioksidant himoya",
+      "Stressni kamaytirish"
+    ],
+    ingredients: [
+      "Ashwagandha ekstrakti",
+      "Zanjabil ildizi kukuni",
+      "Yashil choy ekstrakti",
+      "Vitamin B kompleksi",
+      "Omega-3 yog‘ kislotalari",
+      "Temir"
+    ],
+    usage: "Kuniga 2 kapsula, ovqatdan keyin iching.",
+    productCapacity: "60 capsules",
+    info:
+      "Mahsulotning tabiiy tarkibi ayollarga kundalik faoliyatlarini qo‘llab-quvvatlash uchun mo‘ljallangan.",
+    image: img15,
+    additionalImages: [img11, img12, img13],
+    productVideo: null,
+    rating: 4.5,
+    freeShippingThreshold: 70,
+    deliveryTime: "2-4 kun",
+    classify: "Herbal Supplement",
+    dateAdded: new Date("2023-08-20"),
+    origin: "Switzerland",
+    productCode: "FC6791",
+    contraindications: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat...",
+    variants: [
+      { size: "120 capsules", price: 17.99, discountedPrice: null },
+      { size: "240 capsules", price: 31.99, discountedPrice: null },
+      { size: "500 capsules", price: 54.99, discountedPrice: null }
+    ],
+    originalPrice: 31.99, 
+    discountedPrice: null, 
+    reviews: [
+      {
+        id: 1,
+        user: "Nilufar",
+        rating: 5,
+        comment:
+          "Ajoyib mahsulot! Har kuni iste'mol qilish tavsiya etiladi.",
+        date: new Date("2023-09-15"),
+        reviewImages: [img18, img19],
+        reviewVideo: "review4.mp4"
+      },
+      {
+        id: 2,
+        user: "Zilola",
+        rating: 4,
+        comment:
+          "Mahsulotning ta'siri tezda sezildi, lekin narxi biroz yuqori.",
+        date: new Date("2023-09-18"),
+        reviewImages: [img20],
+        reviewVideo: null
+      }
+    ],
 
-{
-  id: 3,
-  name: "FemCare Vitality Capsules",
-  description:
-    "Bu tabiiy o‘simlik kapsulalari ayollar uchun maxsus ishlab chiqilgan bo‘lib, kundalik energiya va immunitetni qo‘llab-quvvatlashga yordam beradi.",
-  category: "For Body",
-  sex: "women",
-  totalQuantity: 200,
-  stock: 50,
-  soldQuantity: 150,
-  benefits: [
-    "Energiya darajasini oshirish",
-    "Immunitetni mustahkamlash",
-    "Gormonal balansni saqlash",
-    "Qon aylanishini yaxshilash",
-    "Antioksidant himoya",
-    "Stressni kamaytirish"
-  ],
-  ingredients: [
-    "Ashwagandha ekstrakti",
-    "Zanjabil ildizi kukuni",
-    "Yashil choy ekstrakti",
-    "Vitamin B kompleksi",
-    "Omega-3 yog‘ kislotalari",
-    "Temir"
-  ],
-  usage: "Kuniga 2 kapsula, ovqatdan keyin iching.",
-  productCapacity: "60 capsules",
-  info:
-    "Mahsulotning tabiiy tarkibi ayollarga kundalik faoliyatlarini qo‘llab-quvvatlash uchun mo‘ljallangan.",
-  image: img15,
-  additionalImages: [img11, img12, img13],
-  productVideo: videomisol1,
-  rating: 4.5,
-  freeShippingThreshold: 70,
-  deliveryTime: "2-4 kun",
-  classify: "Herbal Supplement",
-  dateAdded: new Date("2023-08-20"),
-  origin: "Switzerland",
-  productCode: "FC6791",
-  variants: [
-    { size: "120 capsules", price: 17.99, discountedPrice: null },
-    { size: "240 capsules", price: 31.99, discountedPrice: null },
-    { size: "500 capsules", price: 54.99, discountedPrice: null }
-  ],
-  originalPrice: 31.99, 
-  discountedPrice: null, 
-  reviews: [
-    {
-      id: 1,
-      user: "Nilufar",
-      rating: 5,
-      comment:
-        "Ajoyib mahsulot! Har kuni iste'mol qilish tavsiya etiladi.",
-      date: new Date("2023-09-15"),
-      reviewImages: [img18, img19],
-      reviewVideo: "review4.mp4"
-    },
-    {
-      id: 2,
-      user: "Zilola",
-      rating: 4,
-      comment:
-        "Mahsulotning ta'siri tezda sezildi, lekin narxi biroz yuqori.",
-      date: new Date("2023-09-18"),
-      reviewImages: [img20],
-      reviewVideo: null
-    }
-  ]
-}
-
-
-
-
-
-]
+    weight: "250g",
+    quantity: 150,
+    color: ["red", "blue"], 
+    natural: "Yes",      
+    packaging: "Pack",
+  }
+];
 
 

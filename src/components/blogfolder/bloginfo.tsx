@@ -82,7 +82,7 @@ const handleShare = (platform: string) => {
 
 
 
-    const { id } = useParams<{ id: string }>();  // URL dan id ni olish
+    const { id } = useParams<{ id: string }>(); 
     const blog = blogdata.find((item) => item.id === id);
   
     if (!blog) {

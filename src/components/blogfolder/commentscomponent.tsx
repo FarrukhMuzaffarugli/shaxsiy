@@ -1,6 +1,6 @@
 // 📦 Commentscomponent.js
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Comments2, Comments3, Comments4, Comments5, Comments6, Replymsg, Inputlar, Yangicomment } from "../stylecomponent";
 import savatcha from "../../Rasm/savatcha.svg";
 import { blogdata } from "../../mock/blog";
@@ -34,6 +34,11 @@ const Commentscomponent = () => {
   const [userEmail, setUserEmail] = useState<string>("");
   const [commentText, setCommentText] = useState<string>("");
   const [comments, setComments] = useState<Comment[]>(blogdata.find((item) => item.id === id)?.comments || []);
+
+  useEffect(() => {
+    const newComments = blogdata.find((item) => item.id === id)?.comments || [];
+    setComments(newComments);
+  }, [id]);
 
   if (!comments.length) return <h2>Blog topilmadi!</h2>;
 
